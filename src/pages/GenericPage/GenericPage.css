@@ -1,0 +1,37 @@
+.generic {
+  padding: 24px;
+}
+
+.generic-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.generic-badge {
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #065f46;
+  background: var(--primary-soft);
+}
+
+.generic-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.generic-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.generic-item p {
+  color: var(--muted);
+  margin-top: 4px;
+}

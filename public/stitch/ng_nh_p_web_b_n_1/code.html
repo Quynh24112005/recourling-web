@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#dcddd7",
+              "surface-container-highest": "#dcddd7",
+              "secondary-fixed": "#d9caff",
+              "on-secondary-container": "#5400ce",
+              "surface-dim": "#d3d5cf",
+              "tertiary": "#3d6600",
+              "surface": "#f7f7f2",
+              "inverse-primary": "#fc5ff5",
+              "primary-fixed": "#fc5ff5",
+              "on-primary-fixed": "#000000",
+              "on-surface-variant": "#5a5c58",
+              "primary-dim": "#900090",
+              "on-secondary": "#f7f0ff",
+              "tertiary-container": "#b5fd5e",
+              "on-tertiary-container": "#395f00",
+              "secondary-dim": "#5d00e3",
+              "on-tertiary-fixed": "#2c4b00",
+              "background": "#f7f7f2",
+              "tertiary-fixed": "#b5fd5e",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#6a1cf6",
+              "secondary-fixed-dim": "#ccb9ff",
+              "inverse-surface": "#0d0f0c",
+              "on-secondary-fixed": "#3e009d",
+              "on-error": "#ffefef",
+              "on-primary-fixed-variant": "#540054",
+              "secondary-container": "#d9caff",
+              "on-error-container": "#510017",
+              "tertiary-fixed-dim": "#a7ee51",
+              "primary-fixed-dim": "#ec50e6",
+              "outline": "#767773",
+              "on-background": "#2d2f2c",
+              "tertiary-dim": "#355900",
+              "surface-container-low": "#f1f1ec",
+              "primary-container": "#fc5ff5",
+              "inverse-on-surface": "#9c9d99",
+              "error-dim": "#a70138",
+              "error": "#b41340",
+              "surface-bright": "#f7f7f2",
+              "surface-tint": "#a400a4",
+              "on-primary-container": "#440044",
+              "surface-container-high": "#e2e3dd",
+              "on-primary": "#ffeef8",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "error-container": "#f74b6d",
+              "surface-container": "#e8e9e3",
+              "on-tertiary-fixed-variant": "#406a00",
+              "primary": "#a400a4",
+              "on-tertiary": "#d9ffaa",
+              "outline-variant": "#adada9",
+              "on-surface": "#2d2f2c"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .text-glow {
+        text-shadow: 0 0 20px rgba(164, 0, 164, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- Top Navigation Bar (Hidden for Focus) -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7f7f2]/80 backdrop-blur-xl flex justify-between items-center px-6 py-4">
+<div class="text-2xl font-headline font-bold tracking-tight text-primary">Linguist Pro</div>
+<div class="flex gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-all active:scale-95 text-on-surface">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Area: Login Screen -->
+<main class="flex-grow flex items-center justify-center px-4 pt-20 pb-12 relative overflow-hidden">
+<!-- Abstract Editorial Background Elements -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+<!-- Login Card -->
+<div class="w-full max-w-[480px] z-10">
+<div class="glass-effect rounded-3xl p-10 md:p-12 shadow-[0_16px_32px_rgba(45,47,44,0.06)] flex flex-col items-center">
+<!-- Brand Anchor -->
+<div class="mb-10 text-center">
+<div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-2xl mb-6 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-on-primary text-3xl" style="font-variation-settings: 'FILL' 1;">translate</span>
+</div>
+<h1 class="font-headline font-extrabold text-3xl text-on-surface tracking-tight mb-2">Linguist Pro</h1>
+<p class="text-on-surface-variant font-medium">Hành trình ngôn ngữ bắt đầu tại đây.</p>
+</div>
+<!-- Login Form -->
+<form class="w-full space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface px-1" for="username">Tên đăng nhập</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">person</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl bg-surface-container-highest border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline/60 text-on-surface" id="username" placeholder="Email hoặc số điện thoại" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="text-sm font-semibold text-on-surface" for="password">Mật khẩu</label>
+<a class="text-xs font-semibold text-primary hover:text-primary-dim transition-colors" href="#">Quên mật khẩu?</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">lock</span>
+<input class="w-full pl-12 pr-12 py-4 rounded-xl bg-surface-container-highest border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline/60 text-on-surface" id="password" placeholder="Nhập mật khẩu" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-dim active:scale-[0.98] transition-all text-lg mt-2" type="submit">
+                        Đăng nhập
+                    </button>
+</form>
+<!-- Separator -->
+<div class="w-full flex items-center my-8 gap-4">
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+<span class="text-xs font-bold text-outline uppercase tracking-widest">Hoặc</span>
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+</div>
+<!-- Social Login Cluster -->
+<div class="w-full grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-surface-container-low border border-outline-variant/15 hover:bg-surface-container-high transition-all active:scale-95 group">
+<svg class="w-5 h-5 group-hover:scale-110 transition-transform" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 1.2-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-sm font-semibold text-on-surface">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-surface-container-low border border-outline-variant/15 hover:bg-surface-container-high transition-all active:scale-95 group">
+<svg class="w-5 h-5 fill-[#1877F2] group-hover:scale-110 transition-transform" viewbox="0 0 24 24">
+<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+</svg>
+<span class="text-sm font-semibold text-on-surface">Facebook</span>
+</button>
+</div>
+<!-- Sign up Link -->
+<p class="mt-10 text-on-surface-variant text-sm font-medium">
+                    Chưa có tài khoản? <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4" href="#">Đăng ký ngay</a>
+</p>
+</div>
+<!-- Promotion / Bento-ish highlight underneath (Asymmetric layout) -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-tertiary-container/30 rounded-2xl p-4 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-tertiary-container">Linguist Pro Premium</p>
+<p class="text-[10px] text-on-tertiary-container/80">Mở khóa tất cả các bài học ngôn ngữ.</p>
+</div>
+</div>
+<div class="bg-secondary-container/30 rounded-2xl p-4 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">group</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-secondary-container">Cộng đồng 5M+</p>
+<p class="text-[10px] text-on-secondary-container/80">Học cùng hàng triệu người khác.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer: Shared Component Guidance Applied -->
+<footer class="bg-surface border-t border-outline-variant/15 tonal-shift">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto w-full gap-8">
+<div class="flex flex-col items-center md:items-start">
+<div class="text-lg font-bold text-primary mb-2">Linguist Pro</div>
+<p class="font-label text-sm text-on-surface/70 text-center md:text-left">© 2024 Linguist Pro. Editorial Language Learning.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label text-sm text-on-surface/60 hover:text-primary transition-colors duration-300" href="#">Bảo mật</a>
+<a class="font-label text-sm text-on-surface/60 hover:text-primary transition-colors duration-300" href="#">Điều khoản</a>
+<a class="font-label text-sm text-on-surface/60 hover:text-primary transition-colors duration-300" href="#">Hỗ trợ</a>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-outline hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">language</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-outline hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">info</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Decorative background image with data-alt -->
+<div class="fixed inset-0 pointer-events-none -z-10 opacity-[0.03]">
+<img alt="Background texture" class="w-full h-full object-cover" data-alt="Soft ethereal library background with old books and warm sunlight filtering through a high window in a classic study environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGrIqOf1CadEEsXhPj6cjewJ2GgOCjXBspV3-W0lRdUnWCeCFzWLL59S4111XsHslyLRpfi1Qtglm_5-mnIfVjhmgmHZpbFmkOcCLO3TJjEPK4CkGokKh2U9sC5SZgK81NpEfUYJm8HvRfQgV-l0seOSyOaNKfaBTA0klcbsvx7TAXP3JTXApGIUVpDaXHwQDZr9zH1VBEPdZynCYiaF0RySIfrstR_YmuynhmuHBzhWqq5vejXpoDDjAipAXCh_mbhByOxNdLYy4"/>
+</div>
+</body></html>

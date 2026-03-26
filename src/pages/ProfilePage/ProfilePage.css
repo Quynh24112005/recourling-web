@@ -1,0 +1,12 @@
+.profile-page { display: flex; justify-content: center; }
+.profile-card { background: var(--surface-container-lowest); border-radius: 24px; padding: 48px 40px; width: 100%; max-width: 560px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); text-align: center; }
+.profile-card h1 { font-size: 28px; margin-bottom: 8px; }
+.profile-sub { color: var(--on-surface-variant); font-size: 14px; margin-bottom: 28px; }
+.profile-avatar-section { position: relative; display: inline-block; margin-bottom: 28px; }
+.profile-avatar-circle { width: 100px; height: 100px; border-radius: 50%; background: var(--surface-container); display: flex; align-items: center; justify-content: center; border: 3px dashed var(--outline-variant); margin: 0 auto; }
+.avatar-camera-btn { position: absolute; bottom: 4px; right: -4px; width: 32px; height: 32px; border-radius: 50%; background: var(--primary); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.profile-card .form-group { text-align: left; }
+.profile-card .form-group label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.profile-back { margin-top: 16px; font-size: 13px; }
+.profile-back a { color: var(--on-surface-variant); }

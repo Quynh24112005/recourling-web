@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cộng đồng - Lucid Educator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#a400a4",
+              "primary-dim": "#900090",
+              "tertiary-fixed": "#b5fd5e",
+              "inverse-on-surface": "#9c9d99",
+              "surface-tint": "#a400a4",
+              "secondary": "#6a1cf6",
+              "tertiary-dim": "#355900",
+              "on-error": "#ffefef",
+              "tertiary": "#3d6600",
+              "on-error-container": "#510017",
+              "on-primary": "#ffeef8",
+              "surface-bright": "#f7f7f2",
+              "primary-container": "#fc5ff5",
+              "error-container": "#f74b6d",
+              "on-tertiary-fixed": "#2c4b00",
+              "primary-fixed": "#fc5ff5",
+              "tertiary-container": "#b5fd5e",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#f7f7f2",
+              "secondary-fixed": "#d9caff",
+              "on-secondary-fixed": "#3e009d",
+              "surface-dim": "#d3d5cf",
+              "outline": "#767773",
+              "tertiary-fixed-dim": "#a7ee51",
+              "surface-container-low": "#f1f1ec",
+              "secondary-container": "#d9caff",
+              "on-surface": "#2d2f2c",
+              "error-dim": "#a70138",
+              "on-secondary": "#f7f0ff",
+              "inverse-surface": "#0d0f0c",
+              "inverse-primary": "#fc5ff5",
+              "on-surface-variant": "#5a5c58",
+              "on-primary-fixed": "#000000",
+              "background": "#f7f7f2",
+              "surface-variant": "#dcddd7",
+              "on-tertiary": "#d9ffaa",
+              "on-secondary-container": "#5400ce",
+              "on-tertiary-container": "#395f00",
+              "on-tertiary-fixed-variant": "#406a00",
+              "secondary-fixed-dim": "#ccb9ff",
+              "on-primary-fixed-variant": "#540054",
+              "primary-fixed-dim": "#ec50e6",
+              "surface-container": "#e8e9e3",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "outline-variant": "#adada9",
+              "surface-container-highest": "#dcddd7",
+              "on-primary-container": "#440044",
+              "surface-container-high": "#e2e3dd",
+              "secondary-dim": "#5d00e3",
+              "on-background": "#2d2f2c",
+              "error": "#b41340"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .active-nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #a400a4;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 z-50 fixed w-full glass-nav">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#a400a4] tracking-tight font-headline">Lucid Educator</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-[#2d2f2c] font-medium font-headline text-lg hover:text-[#6a1cf6] transition-colors duration-200" href="#">Lộ trình</a>
+<a class="text-[#2d2f2c] font-medium font-headline text-lg hover:text-[#6a1cf6] transition-colors duration-200" href="#">Thư viện</a>
+<a class="text-[#a400a4] border-b-2 border-[#a400a4] pb-1 font-bold font-headline text-lg" href="#">Cộng đồng</a>
+<a class="text-[#2d2f2c] font-medium font-headline text-lg hover:text-[#6a1cf6] transition-colors duration-200" href="#">Cá nhân</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User avatar" data-alt="professional headshot of a smiling young man in a clean white shirt against a soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0QePUr54a1X3R9Qa1KmlIpHCri3498n_AxE-MyR90gNXTbqDElEX3UVjTBpWYv1fAUWP7q7jrwxiLutVfpTArhCL03okpmiZV0xl5qNeA-I_pzRJdmIeuBmjSuEDMJJL6SDAnb28AiACJPk2IvZI284X_iu8dXgGRg-XrR-B90HCeVTVewAXYWrFpuYugl4fcTQf2ar_38oePh5IVCnlUbuvVp9hLCikojo7Pdsts_Ie5cWxkYCmD9i4wTfJV2JzfGzGcyq7PnSc"/>
+</div>
+</div>
+</div>
+<div class="bg-[#f1f1ec] h-[1px] w-full"></div>
+</header>
+<div class="max-w-7xl mx-auto pt-24 px-8 flex gap-8">
+<!-- SideNavBar (Left) -->
+<aside class="hidden lg:flex flex-col w-64 h-[calc(100vh-120px)] sticky top-24 py-6 bg-surface">
+<div class="mb-8 px-4">
+<div class="flex items-center space-x-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Tiến độ học tập</p>
+<p class="text-xs text-on-surface-variant">Level B2 - Upper Int.</p>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-4">
+<div class="bg-primary h-1.5 rounded-full" style="width: 65%"></div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center space-x-3 px-4 py-3 text-[#2d2f2c] hover:bg-surface-container-low rounded-xl transition-all mx-2 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">dashboard</span>
+<span class="font-medium text-sm">Bảng điều khiển</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#2d2f2c] hover:bg-surface-container-low rounded-xl transition-all mx-2 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">menu_book</span>
+<span class="font-medium text-sm">Bài học</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#2d2f2c] hover:bg-surface-container-low rounded-xl transition-all mx-2 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">translate</span>
+<span class="font-medium text-sm">Từ vựng</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#2d2f2c] hover:bg-surface-container-low rounded-xl transition-all mx-2 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">mic</span>
+<span class="font-medium text-sm">Luyện nói</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 bg-[#a400a4] text-white rounded-xl mx-2 my-1 shadow-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-medium text-sm">Thành tích</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1 border-t border-surface-container pt-6">
+<div class="bg-primary-container/10 p-4 rounded-2xl mx-2 mb-4">
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-2">Pro Member</p>
+<button class="w-full py-2 bg-primary text-white rounded-xl text-xs font-bold hover:bg-primary-dim transition-colors">Nâng cấp Premium</button>
+</div>
+<a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all mx-2" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-medium text-sm">Trợ giúp</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-error hover:bg-error-container/10 rounded-xl transition-all mx-2" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-medium text-sm">Đăng xuất</span>
+</a>
+</div>
+</aside>
+<!-- Main Feed (Center) -->
+<main class="flex-1 max-w-2xl pb-12">
+<!-- Composer -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 mb-8 shadow-sm">
+<div class="flex space-x-4">
+<img alt="Your avatar" class="w-12 h-12 rounded-full" data-alt="close up headshot of a professional male user for profile thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcl9aMZfg2kDhUns7UNSmp2BVOCRFanfWhEBirdWDHqpl6VLDZGlDUh4kQPELv0CpSPQi8hLkfThLI_2qvtIT5M0ZJITG5oP_Jy0vdw1j4AEgk36qeXAoTSwUycvN92JVU1n8dkfqaoFq6CIGETkeVsQxD0lTEmkDzp_bRJKKtxcIF8pvY2g8EEDMVyhvVCEZ0HkO7yAs34efVg3icq-rWuNzjEr9E2pCMCVXMVOJzbtia32zWghg9-CxjH9pCjwAOtbH0xUu6eHg"/>
+<div class="flex-1 bg-surface-container-highest rounded-xl p-3 text-on-surface-variant cursor-text hover:bg-surface-container transition-colors">
+                        Bạn đang muốn chia sẻ điều gì hôm nay?
+                    </div>
+</div>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-surface-container-low">
+<div class="flex space-x-4">
+<button class="flex items-center space-x-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">image</span>
+<span class="text-sm font-medium">Hình ảnh</span>
+</button>
+<button class="flex items-center space-x-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">video_library</span>
+<span class="text-sm font-medium">Video</span>
+</button>
+</div>
+<button class="px-6 py-2 bg-primary text-white font-bold rounded-xl active:scale-95 transition-transform shadow-lg shadow-primary/20">Đăng bài</button>
+</div>
+</div>
+<!-- Feed Posts -->
+<div class="space-y-8"><!-- Post 1 -->
+<article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[rgba(45,47,44,0.06)_0px_4px_16px">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center space-x-3">
+<img alt="Bác sĩ Minh" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXaM3Rm9kgJTeg5aA1VPrwyJDvQEK82tqbOgUAxORNStCrNDGvyua8TqQGNMyX_C_22PNsZxxz6QSwyF3bu4UNMcdg_1mX0kqHNcG1b1xo25IUjxMwiu5AzpCbgmC3EDxbcpDHw8HmtlOOsHjeS8fL_O2qn4ejOqdA2mhqtn04t1b8HCfhAQM4p7LwhHaPEZBnR6BSsVIRJn54N5eENVFMLNRb3i-xwe_2ADLG3Kbb46u-tVl_J6gib5QyqEV77PZ7tueuLOq-s-s"/>
+<div>
+<h4 class="font-bold text-on-surface font-headline">Bác sĩ Minh</h4>
+<p class="text-xs text-on-surface-variant">1 giờ trước • Kiến thức y khoa</p>
+</div>
+</div>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">Chuyên gia</span>
+</div>
+<h3 class="text-xl font-bold mb-3 font-headline text-on-surface leading-tight">Hành trình hồi phục sau đột quỵ: Những bước đầu tiên quan trọng</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Giai đoạn 'vàng' sau đột quỵ quyết định rất lớn đến khả năng phục hồi. Hãy bắt đầu từ những bài tập nhẹ nhàng và giữ tinh thần lạc quan...</p>
+</div>
+<div class="px-6 pb-6">
+<div class="rounded-2xl overflow-hidden aspect-video relative group cursor-pointer">
+<img alt="Recovery Journey" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA77tqjl5eXp_qS9o0b8EyfxEg318gQYCM53QUXAS8NTfPUdDEXacWQUXm4BIQT8nG_mDvniHLZxpjLnxA3n3DeiJ4LlmaHeZmSYbVrQOWEHc2AfYhSVQ1GCq_7eB_i7Li_NUUJTzTXiXJDUrz2RXAh8ONbOy3zS2HvlW5IqXpAvkkiiKXKhBO5GP27WfyrzzcRsQ34GnJmFPlC0gViA3wkXK6WdnAVV_F1m6NGE0q5-psqYCHWPnmWP3qAO-Jn4WVVXQAQLTuK2RI"/>
+</div>
+</div>
+<div class="px-6 py-4 flex items-center justify-between border-t border-surface-container-low">
+<div class="flex space-x-6">
+<button class="flex items-center space-x-2 text-primary"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span><span class="font-bold text-sm">856</span></button>
+<button class="flex items-center space-x-2 text-on-surface-variant"><span class="material-symbols-outlined">comment</span><span class="font-bold text-sm">42</span></button>
+</div>
+<button class="p-2 text-on-surface-variant"><span class="material-symbols-outlined">bookmark</span></button>
+</div>
+</article>
+<!-- Post 2 -->
+<article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[rgba(45,47,44,0.06)_0px_4px_16px">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center space-x-3">
+<img alt="Kỹ thuật viên Lan" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVyWPeP5erF-jpxvpaJh5dpuvbRK4uOW1HVIsrfRQXZTmfpyg0SsQ2VIPuSZZbWMWnaBK8CThRIf_KbRglA6Ii3RRw1WlKaYxktPlDKl4EFaU-XsbD9YJcelA21rQyBz6asNVR6xwLeWbQKNsfWjOAyzRo7E5rDzxs0XK5dCb2kuu4w3rnY0mIzdWVCt_L3fxURqt868Pb3CLwZWRWxc7_CL8QEkTY0coBaDgond8iJHpzzdIeBChiHxggxoU_TMy-OVF2vc9_HpA"/>
+<div>
+<h4 class="font-bold text-on-surface font-headline">Kỹ thuật viên Lan</h4>
+<p class="text-xs text-on-surface-variant">3 giờ trước • Vật lý trị liệu</p>
+</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-3 font-headline text-on-surface leading-tight">Bài tập vật lý trị liệu tại nhà giúp cải thiện khả năng vận động</h3>
+<p class="text-on-surface-variant leading-relaxed mb-4">Dưới đây là video hướng dẫn 5 động tác cơ bản dành cho tay và chân mà người bệnh có thể tự thực hiện tại nhà mỗi ngày.</p>
+<div class="bg-surface-container-low p-5 rounded-2xl border-l-4 border-primary">
+<p class="italic text-on-surface-variant">"Kiên trì là chìa khóa. Mỗi cử động nhỏ hôm nay là bước tiến lớn cho ngày mai."</p>
+</div>
+</div>
+<div class="px-6 py-4 flex items-center justify-between border-t border-surface-container-low">
+<div class="flex space-x-6">
+<button class="flex items-center space-x-2 text-on-surface-variant"><span class="material-symbols-outlined">favorite</span><span class="font-bold text-sm">320</span></button>
+<button class="flex items-center space-x-2 text-on-surface-variant"><span class="material-symbols-outlined">comment</span><span class="font-bold text-sm">18</span></button>
+</div>
+</div>
+</article>
+<!-- Post 3 -->
+<article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[rgba(45,47,44,0.06)_0px_4px_16px">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center"><span class="material-symbols-outlined text-secondary">restaurant</span></div>
+<div>
+<h4 class="font-bold text-on-surface font-headline">Chuyên gia Dinh dưỡng</h4>
+<p class="text-xs text-on-surface-variant">5 giờ trước • Dinh dưỡng hồi phục</p>
+</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-3 font-headline text-on-surface leading-tight">Chế độ dinh dưỡng vàng cho người đang phục hồi chức năng ngôn ngữ</h3>
+<p class="text-on-surface-variant leading-relaxed mb-4">Thực phẩm giàu Omega-3 và các vitamin nhóm B đóng vai trò quan trọng trong việc tái tạo tế bào thần kinh, hỗ trợ quá trình tập nói và tư duy.</p>
+</div>
+<div class="px-6 py-4 flex items-center justify-between border-t border-surface-container-low">
+<div class="flex space-x-6">
+<button class="flex items-center space-x-2 text-on-surface-variant"><span class="material-symbols-outlined">favorite</span><span class="font-bold text-sm">542</span></button>
+<button class="flex items-center space-x-2 text-on-surface-variant"><span class="material-symbols-outlined">comment</span><span class="font-bold text-sm">25</span></button>
+</div>
+</div>
+</article></div>
+</main>
+<!-- Right Sidebar (Tips & Challenges) -->
+<aside class="hidden xl:block w-80 space-y-6 sticky top-24 h-fit">
+<!-- Daily Tip -->
+<section class="bg-secondary text-on-secondary rounded-3xl p-6 relative overflow-hidden shadow-xl shadow-secondary/20">
+<div class="relative z-10">
+<div class="flex items-center space-x-2 mb-4">
+<span class="material-symbols-outlined text-tertiary-fixed">lightbulb</span>
+<h5 class="font-bold uppercase tracking-widest text-xs opacity-90">Mẹo hàng ngày</h5>
+</div>
+<p class="text-lg font-bold font-headline mb-4 leading-snug">Kích thích tính dẻo của não bộ (Neuroplasticity)</p>
+<p class="text-sm opacity-80 mb-6">Luyện tập các kỹ năng mới lặp đi lặp lại giúp não bộ hình thành các kết nối thần kinh mới, đẩy nhanh quá trình hồi phục chức năng.</p>
+<button class="w-full py-3 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-xl text-sm font-bold transition-all">Tìm hiểu thêm</button>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
+</section>
+<!-- Weekly Challenge -->
+<section class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm border border-outline-variant/10">
+<div class="flex items-center justify-between mb-6">
+<h5 class="font-bold font-headline text-on-surface">Thử thách tuần này</h5>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div class="space-y-4"><div class="flex items-start space-x-4 p-4 rounded-2xl bg-surface-container-low">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container">pan_tool</span>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">Tập cầm nắm đồ vật</p>
+<p class="text-xs text-on-surface-variant">Hoàn thành 15/20 phút</p>
+<div class="w-full bg-surface-container-high rounded-full h-1 mt-2">
+<div class="bg-tertiary h-1 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-start space-x-4 p-4 rounded-2xl bg-surface-container-low">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">record_voice_over</span>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">Luyện phát âm 10 từ mới</p>
+<p class="text-xs text-on-surface-variant">Chưa bắt đầu</p>
+</div>
+</div></div>
+<button class="w-full mt-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl text-sm font-bold transition-all">Tham gia ngay</button>
+</section>
+<!-- Community Leaderboard (Bento style) -->
+<section class="bg-surface-container-low rounded-3xl p-6">
+<h5 class="font-bold font-headline text-on-surface mb-6">Nỗ lực hồi phục</h5>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<span class="text-lg font-black text-on-surface/20 w-4">1</span>
+<img alt="User" class="w-8 h-8 rounded-full" data-alt="professional male profile photo with a gentle smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi7Z_HcOnB0fG1rkDqkc2IlCeUKlyc1vjeUMnknJhO9CkFXu9f00VXGJGg392FaT2p5Hz_eC_1x2jDue5wpOkJnqH3njd8qgnBIh8BSzZo2cngwzpGA8SFjscHYIeu8cwMXPBRyPaRyWZ14KXSAy-FfwXHipEBzilZUfEi3t5I6-fYXKCw8Oc8jgkVwY3K_FI87pH1hVmbLsQgxg-er9IDYOyQSw3x11axAwBm79jnvWrF67CQQ46OmNUI6cztyQblvHX0VwuEmdA"/>
+<span class="text-sm font-bold text-on-surface">Hoàng Nam</span>
+</div>
+<span class="text-xs font-bold text-primary">2,450 XP</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<span class="text-lg font-black text-on-surface/20 w-4">2</span>
+<img alt="User" class="w-8 h-8 rounded-full" data-alt="close up profile of a young professional woman with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6R4D74rpiklhSefroeXLWW6fnBxfCF_BcKcygAVljdAcV-2_NB5UX0UiRI4BYx2hMyVP5UEaVaYQt9T2eNWbp2Jn1Hs6OvfVJVjkpCtkoYE7l9vJAPel2TbIniNVO7iGPwM4Rz-qe5C5n_nb7loHuSlYriTf4bpKZVovRNwGLqXLG0bZzXWyzoM-ctr3bH5pW9cNPhSVR8_X-xLqU8j5fwfYNjRDbTpRqpeB7twOQRFzLtAzFGJmTFylIE1RRvPoieRyE8B3bwGo"/>
+<span class="text-sm font-bold text-on-surface">Thanh Thảo</span>
+</div>
+<span class="text-xs font-bold text-primary">2,120 XP</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<span class="text-lg font-black text-on-surface/20 w-4">3</span>
+<img alt="User" class="w-8 h-8 rounded-full" data-alt="friendly smiling young man with short hair in casual attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvITFZuFY2is3VzESNior9D09rKP7-Jo9lbwyZo8GtWR0-e_ksyRmFP2h5zG7ar729jBAP7JLk8AkMMMAmgT4X2wkmBXB5isBSKNNI8GZabYmYvQtjNKIBWklRqqYJe3JCjvovbEZvdTOejlnbUp4C5L5QoEkKTbk-Kx8Mt1aQvigkHhUqjs48zz3va34oFdJDaEt0w8ZJXs72bdAoVEcE_gpyGVKa-o7ldCI5QyrRW5_sHpFrHKmwtzaZIzGtoRpf9-S6k4ZyYGs"/>
+<span class="text-sm font-bold text-on-surface">Quốc Bảo</span>
+</div>
+<span class="text-xs font-bold text-primary">1,980 XP</span>
+</div>
+</div>
+</section>
+</aside>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-transform group">
+<span class="material-symbols-outlined text-3xl">add</span>
+<span class="absolute right-full mr-4 bg-on-surface text-surface px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Tạo bài viết mới</span>
+</button>
+</body></html>

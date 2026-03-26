@@ -1,0 +1,287 @@
+.stitch-home {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  position: relative;
+}
+
+.stitch-hero-grid {
+  display: grid;
+  grid-template-columns: 1.9fr 1fr;
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.stitch-welcome-card {
+  background: #fdfdff;
+  border-radius: 30px;
+  min-height: 250px;
+  padding: 34px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.stitch-welcome-label {
+  color: var(--primary);
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stitch-welcome-card h2 {
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.06;
+  letter-spacing: -1px;
+  max-width: 600px;
+}
+
+.stitch-start-btn {
+  margin-top: 22px;
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: 14px;
+  padding: 13px 24px;
+  font-size: 28px;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(164, 0, 164, 0.32);
+}
+
+.stitch-welcome-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+}
+
+.stitch-welcome-icon .material-symbols-outlined {
+  font-size: 128px;
+  color: #ddb8eb;
+}
+
+.stitch-progress-card {
+  background: linear-gradient(180deg, #bb00b8 0%, #9800b4 100%);
+  color: #fff;
+  border-radius: 30px;
+  min-height: 250px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 16px 32px rgba(164, 0, 164, 0.24);
+}
+
+.stitch-progress-circle {
+  width: 128px;
+  height: 128px;
+  margin: 2px auto 14px;
+  position: relative;
+}
+
+.stitch-progress-circle svg {
+  width: 100%;
+  height: 100%;
+}
+
+.stitch-progress-circle span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.stitch-progress-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.stitch-progress-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13px;
+}
+
+.stitch-mode {
+  margin-bottom: 28px;
+}
+
+.stitch-mode-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.stitch-mode-head h3 {
+  font-size: 22px;
+}
+
+.stitch-mode-head span {
+  color: var(--on-surface-variant);
+  font-size: 13px;
+}
+
+.stitch-mode-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.stitch-mode-buttons button {
+  border-radius: 999px;
+  background: #ededea;
+  color: #474747;
+  padding: 10px 24px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stitch-mode-buttons button.active {
+  background: #fff;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 8px 22px;
+}
+
+.stitch-units-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 18px 0 14px;
+}
+
+.stitch-units-head h3 {
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.08;
+}
+
+.stitch-view-all {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.stitch-view-all .material-symbols-outlined {
+  font-size: 15px;
+}
+
+.stitch-units-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.stitch-unit-card {
+  background: #fdfdff;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.stitch-unit-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.stitch-unit-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.stitch-unit-icon .material-symbols-outlined {
+  font-size: 22px;
+}
+
+.stitch-unit-code {
+  color: rgba(45, 47, 44, 0.3);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.stitch-unit-card h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.stitch-unit-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #585858;
+}
+
+.stitch-bar-bg {
+  margin-top: 6px;
+  height: 8px;
+  border-radius: 999px;
+  background: #d8d8d4;
+  overflow: hidden;
+}
+
+.stitch-bar-fill {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.icon-orange { background: #ffe9da; color: #f97316; }
+.icon-blue { background: #dfeeff; color: #3b82f6; }
+.icon-purple { background: #f0e4ff; color: #8b5cf6; }
+.icon-green { background: #daf7e5; color: #18a34a; }
+.icon-red { background: #ffe2e2; color: #ef4444; }
+.icon-indigo { background: #e5e8ff; color: #6366f1; }
+
+.bar-orange { background: #f97316; }
+.bar-blue { background: #3b82f6; }
+.bar-purple { background: #8b5cf6; }
+.bar-green { background: #22c55e; }
+.bar-red { background: #ef4444; }
+.bar-indigo { background: #6366f1; }
+
+.stitch-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: 0 14px 30px rgba(164, 0, 164, 0.35);
+}
+
+@media (max-width: 1100px) {
+  .stitch-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stitch-units-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .stitch-units-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stitch-mode-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .stitch-welcome-card {
+    padding: 22px;
+  }
+
+  .stitch-start-btn {
+    font-size: 20px;
+  }
+}

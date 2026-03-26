@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Linguist Pro - Khám phá</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#f7f0ff",
+              "primary-fixed-dim": "#ec50e6",
+              "surface": "#f7f7f2",
+              "surface-dim": "#d3d5cf",
+              "surface-tint": "#a400a4",
+              "surface-container-highest": "#dcddd7",
+              "on-primary-fixed-variant": "#540054",
+              "on-tertiary": "#d9ffaa",
+              "on-secondary-container": "#5400ce",
+              "surface-variant": "#dcddd7",
+              "inverse-surface": "#0d0f0c",
+              "on-surface": "#2d2f2c",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#3d6600",
+              "primary-fixed": "#fc5ff5",
+              "error": "#b41340",
+              "error-dim": "#a70138",
+              "outline": "#767773",
+              "on-tertiary-fixed": "#2c4b00",
+              "secondary-container": "#d9caff",
+              "on-tertiary-container": "#395f00",
+              "on-background": "#2d2f2c",
+              "secondary-fixed": "#d9caff",
+              "on-error": "#ffefef",
+              "primary-container": "#fc5ff5",
+              "on-surface-variant": "#5a5c58",
+              "outline-variant": "#adada9",
+              "on-primary-fixed": "#000000",
+              "on-primary": "#ffeef8",
+              "inverse-on-surface": "#9c9d99",
+              "surface-bright": "#f7f7f2",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "on-error-container": "#510017",
+              "tertiary-fixed": "#b5fd5e",
+              "secondary-dim": "#5d00e3",
+              "inverse-primary": "#fc5ff5",
+              "tertiary-fixed-dim": "#a7ee51",
+              "background": "#f7f7f2",
+              "on-secondary-fixed": "#3e009d",
+              "on-primary-container": "#440044",
+              "secondary": "#6a1cf6",
+              "surface-container-low": "#f1f1ec",
+              "error-container": "#f74b6d",
+              "primary": "#a400a4",
+              "on-tertiary-fixed-variant": "#406a00",
+              "surface-container": "#e8e9e3",
+              "tertiary-dim": "#355900",
+              "surface-container-high": "#e2e3dd",
+              "primary-dim": "#900090",
+              "secondary-fixed-dim": "#ccb9ff",
+              "tertiary-container": "#b5fd5e"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f7f7f2;
+            color: #2d2f2c;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex min-h-screen">
+<!-- SideNavBar (Shared Component) -->
+<aside class="hidden lg:flex flex-col h-screen w-64 p-4 gap-2 bg-[#f7f7f2] dark:bg-[#121212] sticky top-0 overflow-y-auto">
+<div class="flex flex-col mb-8 px-4">
+<span class="font-['Plus_Jakarta_Sans'] font-extrabold text-[#a400a4] text-2xl tracking-tight">Lucid</span>
+<span class="font-['Be_Vietnam_Pro'] text-sm font-medium text-on-surface-variant">Language Lab</span>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<!-- Active Tab: Khám phá -->
+<a class="flex items-center gap-3 bg-[#a400a4]/10 dark:bg-[#a400a4]/20 text-[#a400a4] dark:text-[#ff40ff] rounded-xl px-4 py-3 font-['Be_Vietnam_Pro'] text-sm font-medium active:translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span>Khám phá</span>
+</a>
+<a class="flex items-center gap-3 text-[#2d2f2c] dark:text-[#adada9] px-4 py-3 font-['Be_Vietnam_Pro'] text-sm font-medium hover:bg-[#dcddd7] dark:hover:bg-[#2d2d2d] rounded-xl transition-all active:translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span>Khóa học</span>
+</a>
+<a class="flex items-center gap-3 text-[#2d2f2c] dark:text-[#adada9] px-4 py-3 font-['Be_Vietnam_Pro'] text-sm font-medium hover:bg-[#dcddd7] dark:hover:bg-[#2d2d2d] rounded-xl transition-all active:translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span>Thư viện</span>
+</a>
+<a class="flex items-center gap-3 text-[#2d2f2c] dark:text-[#adada9] px-4 py-3 font-['Be_Vietnam_Pro'] text-sm font-medium hover:bg-[#dcddd7] dark:hover:bg-[#2d2d2d] rounded-xl transition-all active:translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span>Cá nhân</span>
+</a>
+</nav>
+<div class="mt-auto p-4 bg-surface-container-low rounded-xl">
+<p class="text-xs font-medium text-on-surface-variant mb-3">Sẵn sàng nâng cao trình độ?</p>
+<button class="w-full bg-primary text-on-primary py-2 px-4 rounded-xl text-sm font-bold shadow-sm hover:opacity-90 transition-opacity">
+                Bắt đầu học
+            </button>
+</div>
+</aside>
+<main class="flex-1 flex flex-col min-w-0">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 z-50 w-full lg:w-[calc(100%-16rem)] flex justify-between items-center px-6 py-3 bg-[#f7f7f2]/80 dark:bg-[#1a1a1a]/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center gap-4">
+<span class="lg:hidden font-['Plus_Jakarta_Sans'] font-black text-[#a400a4] text-2xl tracking-tight">Lucid</span>
+<div class="hidden md:flex items-center bg-surface-container-highest px-4 py-2 rounded-full min-w-[300px]">
+<span class="material-symbols-outlined text-outline text-sm mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-outline" placeholder="Tìm kiếm bài học..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-[#dcddd7]/50 transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined text-on-surface" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-[#dcddd7]/50 transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined text-on-surface" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a cheerful person with soft studio lighting and a clean neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1IeshGZOK1-As0S11_pXoBTO9XtpIuQxEm6_zgKf3ilYZ5LQuOuvM6qWWuRhoOhgeQ4pO_wMuWuUVabhqx1NduAlPCSWfhpHUcpdgObK2egQei66C2uUgNmRZGPs3hjyVXkO1KURVRz3lnEi6Zwj4HlqMIUm8SZLREY953ewioq-o6C8KrRa2dGekfPk2xhagloUkocHtD6b7J7ZO0W4LHP8-eFgnnVcm5MwHpWg_iO_WjkSoM1V1TjBpCM9e8cLA9jzLZnACUP8"/>
+</div>
+</div>
+<div class="bg-[#f1f1ec] dark:bg-[#2d2d2d] h-[1px] w-full absolute bottom-0 left-0"></div>
+</header>
+<!-- Content Canvas -->
+<div class="mt-16 p-6 lg:p-8 flex flex-col gap-10 max-w-7xl mx-auto w-full">
+<!-- Hero Learning Journey Section -->
+<section class="relative overflow-hidden bg-primary-container/10 rounded-3xl p-8 lg:p-12 flex flex-col md:flex-row items-center justify-between gap-8 group">
+<div class="flex-1 space-y-4 z-10">
+<span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-bold uppercase tracking-wider">Mới nhất</span>
+<h1 class="text-4xl lg:text-5xl font-black text-on-primary-container leading-tight">Hành trình học tập mới của bạn</h1>
+<p class="text-lg text-on-surface-variant max-w-lg">Khám phá phương pháp học ngôn ngữ theo phong cách biên tập chuyên nghiệp. Hiệu quả và đầy cảm hứng.</p>
+<div class="pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-3 shadow-lg hover:translate-y-[-2px] transition-transform active:scale-95">
+                            Tiếp tục hành trình
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative w-full md:w-1/2 max-w-md">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+<img alt="Education Illustration" class="rounded-2xl shadow-2xl relative z-10 w-full aspect-[4/3] object-cover" data-alt="Modern educational workspace with an open book, a cup of coffee, and soft natural sunlight streaming through a window onto a light wooden desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvkteSx2WVCBuHugYzhLG1cw-Re7z_zuSEBJ5tkae5LSFCI2JP6lIlddWXuj5-XyWPSZLXgGx_R5OFxBn1_EZ6Z7w_crbucqSdspHAu0fY3KYvvaA1XHkSka6AIYcsBEHxqW6Tp3J7-zR4prfWoyk8W-57N6dPReFuEnpMeNBOFjEeYRzg_rcwdonERffoNTBAgHaRDf64XE3tcHlwEI6QmH56GP6rK7FhR0faSdEWgYv9dzOffYRyLzylgWiXuT5HBW93GJ2SC5k"/>
+</div>
+</section>
+<!-- Main Layout: Bento Grid + Sidebar -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8">
+<!-- Courses Section (Bento Style) -->
+<div class="xl:col-span-8 space-y-6">
+<div class="flex items-center justify-between px-2">
+<h2 class="text-2xl font-bold text-on-surface">Khóa học dành cho bạn</h2>
+<button class="text-primary font-bold text-sm hover:underline">Xem tất cả</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1: Tiếng Anh giao tiếp -->
+<div class="group bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow border border-transparent hover:border-primary/10 flex flex-col">
+<div class="relative w-full h-40 rounded-xl overflow-hidden mb-4">
+<img alt="English Course" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Cinematic street view of London with a red double-decker bus and Big Ben in the soft morning fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrTm9Mc3m2qdHNiFxd8X4K-ZeaokUP3FmUZyJmKgGdc9VmN61v9Y6L_wRYT2ZdmyOA-s3Ce8gEwKg0F57F57mDJLcWMniTXLrShZpnQt2kGX_am5SYGYnNQ1x1S3vlt6lPb3aDEzkm2xilOsljGGHBngZgKEB3wogTU4EJSE6hj4pWOLNfP_21vPeO1-dvrTrPEBJshJ1Rc4oZKxHNkhx9ngUbH6FLJhy95z_Ne_terTp0CCImhTVSWW9gA2aVzRdQhgfH5OmQFVs"/>
+<div class="absolute top-3 left-3 bg-tertiary text-on-tertiary px-2 py-1 rounded-lg text-xs font-bold">Thành thạo</div>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Tiếng Anh giao tiếp</h3>
+<p class="text-sm text-on-surface-variant mb-4">Làm chủ các tình huống thực tế trong công việc và du lịch.</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="Student" class="w-6 h-6 rounded-full border-2 border-surface" data-alt="Circular avatar of a student smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEa1g0rU72bUyOjE_xkNqWyWF3qbuW_Hs410V0rWqHCCXNdnfmIAv6TxkH48TW-wcq1VYcoRzdyMnlZD0Rxr41QVRVaFqn5hIhcvmY5KZaG6PpzU8B9hUvsjuRCUqxvkZNQC2VUKICVqh___GeqwUB2Oj8pZHxJbk5427Eo60TrsEE3DNo_pOeTvG0jDeDMlQ8c0tKvATYSZJRL_W3H_CkzwD0P8oA2J3wLjnLwP7fTLP2SlwCsqfP_2ioEAVOA4AO9Zfrd2m3UsU"/>
+<img alt="Student" class="w-6 h-6 rounded-full border-2 border-surface" data-alt="Circular avatar of a professional student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIC9o7yq5gED5Db2SI2fFax5D6RwIBvRVpiJG5fNKqkg1o3banX6lyXprPvlmAf7jcRwc1APUlhlpG34_m18NBzKsw2CygymROgJgiaeHZN1LMmWUm6CI9QmW5tE09WU5yWnd7DG4Ffr49GXhZNzM82g5_zOVcT6Z4RmBJDAoSCWfHB98ARJCiaf78U6DBqfD4pc6DIdzCrZeFzodyGaRvs53dtJ4pR9wtfHAJRMwF4sUIcQY0KNWrdRJyBe-ECapeGk5tXq7S0R8"/>
+<span class="w-6 h-6 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[8px] font-bold">+12</span>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-bold text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    4.9
+                                </div>
+</div>
+</div>
+<!-- Card 2: Tiếng Hàn cơ bản -->
+<div class="group bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow border border-transparent hover:border-primary/10 flex flex-col">
+<div class="relative w-full h-40 rounded-xl overflow-hidden mb-4">
+<img alt="Korean Course" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Vibrant night scene of Seoul street with neon signs and futuristic urban atmosphere in purple and blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXKKzHmfnhRqBFsxBkcbAU9T8mXut9PuKDFhnolTmQP9ur8zKUCcC9lKtqL6IACr9eOi8rYrXsaHmkkufZX7AqokjCk9w6q3-2kfdyO9cUtFaRbgnE3vuoGNF7bZg3L57lImZ2pTOVR8HF9eTPVLFHbpPP6Axp1XFOUUvZV9ue2kle3IPMY1OI2NnCVqP_IWD5R1pl3ggtVauNIUuWTq8Lvuz0kdHSPIWqNyGymjep9YLTdhFw_sckWBttQqyMTLKq1zTOCYN0A94"/>
+<div class="absolute top-3 left-3 bg-secondary text-on-secondary px-2 py-1 rounded-lg text-xs font-bold">Người mới</div>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Tiếng Hàn cơ bản</h3>
+<p class="text-sm text-on-surface-variant mb-4">Học bảng chữ cái Hangeul và cách chào hỏi căn bản.</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="Student" class="w-6 h-6 rounded-full border-2 border-surface" data-alt="Avatar of a creative student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxMSVYW1RZm4SO64QeDd88KCC4FpIS1H8NvNCKm0bL_MUqPOW8wu0Asol7NChjfWjbBSFf9j7qW2vywqOSB67BKiWlx00FaABWaskPmArl9of4nfzYGiyV1metrtbAv60T2y15H-Z_5KWuHlngVTdNadhiVKDkdAXyoz75VBHkpJoR2e8TF8SE1v1oh2iVOd9GvhYTqz9THxpFBAk91OsBEbnJdzJwXpEi3ZrgsrZELu5DwB_JUsJXmqT6m_3ukxBlRSgNhaL_8m4"/>
+<img alt="Student" class="w-6 h-6 rounded-full border-2 border-surface" data-alt="Avatar of a young learner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADNMVs8GDz_1TklUzLh0PxCrorwDwU15uNvF3KPnvuiS2hr-QAth407tGGVwOVLgzPmSWpMuEzsNcSrGzw2kZ6Yd1R6HwDAg0VBA9IPx_RwEnJeyOSsR_Kh_vKSGEibxUG-NYer-FujkY1iO_i3lhQIk7QU8NiT2KimDHRiXchJTba7sTXPAXuqLMxFxvsv7cfWa7k3sawMy_ri75Y1EWEaB4o7VU4JoMGoOIPTtNhK8fWUTLTfb4GjXzxZHgz2jKVC_9b1Aj0btI"/>
+<span class="w-6 h-6 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[8px] font-bold">+8</span>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-bold text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    4.8
+                                </div>
+</div>
+</div>
+<!-- Card 3: Wide Layout Course -->
+<div class="md:col-span-2 group flex flex-col md:flex-row bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-transparent hover:border-primary/10">
+<div class="w-full md:w-1/3 h-48 md:h-auto overflow-hidden">
+<img alt="Community Class" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Group of diverse people sitting in a modern airy cafe having a lively conversation over coffee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCowcBUSKp-yti9HFLo07NFO2WytllzCaqmUAdNP5geOI3XsvZk7cpsIqKbZ5ztNNmbtqauM_ujkBCeJ-1VN1esRvLJkxN1G5weTSZLg012JiNmYZkDtY0WcY6KQfqfKswYglHxjFYazHlhTKZcunydFdY56cJFs7lC3kB6IuPE0HOl9XNS9l7ny8kflNPpWALjuLiLdwaeD2cTgre083eNUimP5ufFuY3-sAcxpkEna-f3OejzhAVKXiq3O7Ae-srYi2X1LDwQ85Q"/>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-center">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-2">
+<span class="material-symbols-outlined text-xs" data-icon="groups">groups</span>
+                                    Học nhóm
+                                </div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Câu lạc bộ luyện nói mỗi tối</h3>
+<p class="text-sm text-on-surface-variant mb-6">Tham gia cùng hàng nghìn học viên khác để thực hành phản xạ tự nhiên thông qua các chủ đề thịnh hành.</p>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-xl text-sm font-bold active:scale-95 transition-transform">
+                                        Tham gia ngay
+                                    </button>
+<span class="text-xs text-outline font-medium">Đang diễn ra: 1.2k người</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Community Sidebar Section -->
+<aside class="xl:col-span-4 space-y-6">
+<div class="flex items-center justify-between px-2">
+<h2 class="text-2xl font-bold text-on-surface">Cộng đồng</h2>
+<button class="text-primary font-bold text-sm hover:underline">Mới nhất</button>
+</div>
+<div class="space-y-4">
+<!-- Post 1 -->
+<div class="bg-surface-container-low rounded-2xl p-4 transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-3 mb-3">
+<img alt="User" class="w-8 h-8 rounded-full" data-alt="Portrait avatar of a smiling young woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4t3YZJvbASN7Khc0n8Pl24vdstjSFkmQRaZ_kKQHN1DspK0ZsPzCfBlfdsdS-VzeYzosd6sNZM-NJ0zSXPLGdW51AqQvamcHuNAuYiY9_gHIRFBijW0biLaYUcgKodYbW-IYxtfeHBtE5jfeRn9To0BuZHsYULa19wFPQN4SiXRt8-U6yL8tcvY9V_bj1ojnE5NXoCeYLRvNiWotWAyYdMI41azULDbtOIDm44Hsxrj7vWjeibT8JjZuQ37DKt8zmu6q3nHX15xs"/>
+<div>
+<p class="text-sm font-bold text-on-surface leading-none">Minh Anh</p>
+<p class="text-xs text-on-surface-variant">2 phút trước</p>
+</div>
+</div>
+<p class="text-sm text-on-surface mb-3 line-clamp-2 italic">"Hôm nay mình đã hoàn thành thử thách 30 ngày học Tiếng Anh! Cảm giác thật tuyệt vời."</p>
+<div class="flex items-center gap-4 text-outline-variant">
+<div class="flex items-center gap-1 text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span>
+                                    24
+                                </div>
+<div class="flex items-center gap-1 text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="chat_bubble">chat_bubble</span>
+                                    5
+                                </div>
+</div>
+</div>
+<!-- Post 2 -->
+<div class="bg-surface-container-low rounded-2xl p-4 transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-3 mb-3">
+<img alt="User" class="w-8 h-8 rounded-full" data-alt="Portrait avatar of a friendly looking young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5vfMRdHuY8qcxVtm9EU2r_VMRqKOUb1Puqf6dFReesHCRjmJk6bJ8BXQw1nvJqr4LLHmdJMLdwTiTS_WgLKNnOtjP73LdOmxWN9abWnDXIhSSbRFCdmTqEuZuRTn45uUlwCzmrXs2L1LxwW0ciywaWv-v4sdNSWWAd1Zg9lnmIHFTZVhs3Er-uaJwx5m6POqjvJeGPgmq5Mq9DM9ehTion27z9gruoTZB_EENE6m7hFKSb0-zT_pE8Ii2gfJI0MAy1a1VU553swY"/>
+<div>
+<p class="text-sm font-bold text-on-surface leading-none">Quốc Bảo</p>
+<p class="text-xs text-on-surface-variant">15 phút trước</p>
+</div>
+</div>
+<p class="text-sm text-on-surface mb-3 line-clamp-2">Cần tìm bạn cùng luyện nói Tiếng Hàn trình độ TOPIK 2 ạ. Ai rảnh inbox nhé!</p>
+<div class="flex items-center gap-4 text-outline-variant">
+<div class="flex items-center gap-1 text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span>
+                                    12
+                                </div>
+<div class="flex items-center gap-1 text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="chat_bubble">chat_bubble</span>
+                                    8
+                                </div>
+</div>
+</div>
+<!-- Leaderboard Mini Card -->
+<div class="bg-secondary-container/30 rounded-2xl p-6 border border-secondary/10 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-secondary font-black text-lg mb-4">Bảng xếp hạng tuần</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 text-xs font-bold text-secondary">1.</span>
+<span class="text-sm font-medium text-on-secondary-container">Lan Hương</span>
+</div>
+<span class="text-xs font-bold text-on-secondary-container">2,450 pts</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 text-xs font-bold text-outline">2.</span>
+<span class="text-sm font-medium text-on-secondary-container">Tùng Dương</span>
+</div>
+<span class="text-xs font-bold text-on-secondary-container">2,100 pts</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 text-xs font-bold text-outline">3.</span>
+<span class="text-sm font-medium text-on-secondary-container">Mai Hoa</span>
+</div>
+<span class="text-xs font-bold text-on-secondary-container">1,980 pts</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-8xl text-secondary/10" data-icon="military_tech">military_tech</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<!-- Footer / Spacing -->
+<footer class="mt-auto py-12 px-8 bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline font-extrabold text-primary text-xl">LucidEducator</span>
+<p class="text-xs text-on-surface-variant mt-1">© 2024 Linguist Pro Language Lab. Bản quyền được bảo lưu.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Điều khoản</a>
+<a class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Quyền riêng tư</a>
+<a class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Trợ giúp</a>
+</div>
+</div>
+</footer>
+</main>
+<!-- FAB (Floating Action Button) - Rendered for Discover screen context -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform z-50">
+<span class="material-symbols-outlined text-2xl" data-icon="chat">chat</span>
+</button>
+</body></html>

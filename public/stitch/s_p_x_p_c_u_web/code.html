@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lucid Educator - Sắp xếp câu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#a400a4",
+              "primary-dim": "#900090",
+              "tertiary-fixed": "#b5fd5e",
+              "inverse-on-surface": "#9c9d99",
+              "surface-tint": "#a400a4",
+              "secondary": "#6a1cf6",
+              "tertiary-dim": "#355900",
+              "on-error": "#ffefef",
+              "tertiary": "#3d6600",
+              "on-error-container": "#510017",
+              "on-primary": "#ffeef8",
+              "surface-bright": "#f7f7f2",
+              "primary-container": "#fc5ff5",
+              "error-container": "#f74b6d",
+              "on-tertiary-fixed": "#2c4b00",
+              "primary-fixed": "#fc5ff5",
+              "tertiary-container": "#b5fd5e",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#f7f7f2",
+              "secondary-fixed": "#d9caff",
+              "on-secondary-fixed": "#3e009d",
+              "surface-dim": "#d3d5cf",
+              "outline": "#767773",
+              "tertiary-fixed-dim": "#a7ee51",
+              "surface-container-low": "#f1f1ec",
+              "secondary-container": "#d9caff",
+              "on-surface": "#2d2f2c",
+              "error-dim": "#a70138",
+              "on-secondary": "#f7f0ff",
+              "inverse-surface": "#0d0f0c",
+              "inverse-primary": "#fc5ff5",
+              "on-surface-variant": "#5a5c58",
+              "on-primary-fixed": "#000000",
+              "background": "#f7f7f2",
+              "surface-variant": "#dcddd7",
+              "on-tertiary": "#d9ffaa",
+              "on-secondary-container": "#5400ce",
+              "on-tertiary-container": "#395f00",
+              "on-tertiary-fixed-variant": "#406a00",
+              "secondary-fixed-dim": "#ccb9ff",
+              "on-primary-fixed-variant": "#540054",
+              "primary-fixed-dim": "#ec50e6",
+              "surface-container": "#e8e9e3",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "outline-variant": "#adada9",
+              "surface-container-lowest-alpha80": "rgba(255, 255, 255, 0.8)",
+              "on-primary-container": "#440044",
+              "surface-container-high": "#e2e3dd",
+              "secondary-dim": "#5d00e3",
+              "on-background": "#2d2f2c",
+              "error": "#b41340"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .word-chip-shadow {
+            box-shadow: 0 4px 16px rgba(45, 47, 44, 0.06);
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(135deg, #a400a4 0%, #900090 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-primary tracking-tight font-headline">Lucid Educator</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-headline font-bold text-lg hover:text-secondary transition-colors duration-200" href="#">Lộ trình</a>
+<a class="text-on-surface font-medium hover:text-secondary transition-colors duration-200" href="#">Thư viện</a>
+<a class="text-on-surface font-medium hover:text-secondary transition-colors duration-200" href="#">Cộng đồng</a>
+<a class="text-on-surface font-medium hover:text-secondary transition-colors duration-200" href="#">Cá nhân</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-on-surface hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="Close-up profile of a smiling professional educator in a bright modern office setting, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkdjoHqOEj1HODeQP28TftjnljfPhfMDl_BkdTvVG8_c00wYHYKlPlG774hyhBynHvSOIPR_EvTUF2FC37b_TAwIhYfDvJ9GM0ZX8A1QqwlDAxID9bFmHZHuwuPXq2MP0Ix_fy-HYjw89pczybnrCdONaoDm-ct9ZfaVcWG6f_QKfZ_m_9L-4GfbInkUv80rn23vDPZRkmYMHMkXjWLKiAZ19vtjU9AGvfpk5ooxepMv6Y9K6oAd6l6-tJ_MqHiju6DK6yUc2WWNQ"/>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low h-[1px] w-full"></div>
+</header>
+<main class="pt-24 pb-12 px-6 max-w-7xl mx-auto flex flex-col items-center">
+<!-- Progress Section -->
+<div class="w-full max-w-3xl mb-12">
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">Bài học 4: Cấu trúc câu cơ bản</span>
+<span class="text-sm font-bold text-primary">85% Hoàn thành</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<!-- Exercise Layout: Asymmetric Bento Grid Style -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full">
+<!-- Left Column: Character & Instruction -->
+<div class="lg:col-span-4 flex flex-col items-center lg:items-end space-y-6">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden bg-surface-container-low">
+<img alt="Teacher" class="w-full h-full object-cover" data-alt="Friendly female teacher character illustration, warm smile, wearing glasses and a purple blazer, modern flat 3D style, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaHqCjGznlvSj17CCtOWs-7zn_31xEo2X2WYr8ezaC_Xfaa-lnRyDz3sEmqzLRxJiMV3Xv1cany6UTAh2IuF3Jfzr0uxTi8vHbhcN7XVUo8dxWfJqJdpGl_tpobfdOjF_zulKCk0sjBGl6VVG4OWqLAqywcK2XG4CeI6TnuOZorwPUiBclSbWbVeHb3Vi88FCQ-nhuA4EcPWwDL1zWmEzgJpi03Rd1-8EdTzg4X1mVu3TkTqjAeo_DfldzX-aF7xoN8ECZ8NlgIiI"/>
+</div>
+<!-- Speech Bubble Overlap -->
+<div class="absolute -bottom-4 -right-4 lg:-right-8 bg-surface-container-lowest p-4 rounded-xl word-chip-shadow max-w-[200px] border border-outline-variant/15">
+<p class="text-sm font-medium italic text-on-surface">"Hãy sắp xếp các từ bên dưới để tạo thành một câu hoàn chỉnh nhé!"</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Workspace -->
+<div class="lg:col-span-8 flex flex-col space-y-8">
+<!-- Instruction Header -->
+<div class="bg-surface-container-low rounded-2xl p-6 border-l-4 border-primary">
+<h1 class="text-2xl lg:text-3xl font-headline font-bold text-on-surface mb-2">Sắp xếp câu</h1>
+<p class="text-on-surface-variant text-lg">Di chuyển các thẻ từ vào ô trống để hoàn thành câu đúng.</p>
+</div>
+<!-- Target Area (Drop Zone) -->
+<div class="bg-surface-container-highest min-h-[140px] rounded-2xl p-8 flex flex-wrap gap-4 items-center justify-center border-2 border-dashed border-outline-variant/30 relative">
+<!-- Placeholder text when empty -->
+<!-- <span class="text-outline-variant font-medium italic">Kéo thả các từ vào đây...</span> -->
+<!-- Simulating a partially filled state for visual appeal -->
+<div class="bg-surface-container-lowest px-6 py-3 rounded-xl word-chip-shadow text-primary font-bold text-lg border border-outline-variant/10 cursor-default select-none transition-transform active:scale-95">
+                        The
+                    </div>
+<div class="bg-surface-container-lowest px-6 py-3 rounded-xl word-chip-shadow text-primary font-bold text-lg border border-outline-variant/10 cursor-default select-none transition-transform active:scale-95">
+                        educator
+                    </div>
+<!-- Empty slot effect -->
+<div class="w-24 h-12 rounded-xl bg-surface-container-low border border-outline-variant/20"></div>
+</div>
+<!-- Word Chips (Source) -->
+<div class="flex flex-wrap gap-4 justify-center py-6">
+<div class="bg-surface-container-lowest px-6 py-3 rounded-xl word-chip-shadow text-primary font-bold text-lg border border-outline-variant/10 cursor-pointer select-none transition-all hover:bg-surface-container-low hover:-translate-y-1 active:scale-95">
+                        lucid
+                    </div>
+<div class="bg-surface-container-lowest px-6 py-3 rounded-xl word-chip-shadow text-primary font-bold text-lg border border-outline-variant/10 cursor-pointer select-none transition-all hover:bg-surface-container-low hover:-translate-y-1 active:scale-95">
+                        is
+                    </div>
+<div class="bg-surface-container-lowest px-6 py-3 rounded-xl word-chip-shadow text-primary font-bold text-lg border border-outline-variant/10 cursor-pointer select-none transition-all hover:bg-surface-container-low hover:-translate-y-1 active:scale-95">
+                        teaching
+                    </div>
+<div class="bg-surface-container-lowest px-6 py-3 rounded-xl word-chip-shadow text-primary font-bold text-lg border border-outline-variant/10 cursor-pointer select-none transition-all hover:bg-surface-container-low hover:-translate-y-1 active:scale-95">
+                        English
+                    </div>
+<div class="bg-surface-container-lowest px-6 py-3 rounded-xl word-chip-shadow text-primary font-bold text-lg border border-outline-variant/10 cursor-pointer select-none transition-all hover:bg-surface-container-low hover:-translate-y-1 active:scale-95">
+                        today
+                    </div>
+</div>
+<!-- Footer Action -->
+<div class="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-surface-container-high space-y-4 sm:space-y-0">
+<button class="flex items-center space-x-2 text-on-surface-variant hover:text-primary transition-colors font-semibold py-3 px-6 rounded-xl hover:bg-surface-container-low">
+<span class="material-symbols-outlined">refresh</span>
+<span>Làm lại</span>
+</button>
+<div class="flex space-x-4 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none border border-outline-variant/30 text-on-surface font-bold py-3 px-10 rounded-xl hover:bg-surface-container-low transition-colors">
+                            Bỏ qua
+                        </button>
+<button class="flex-1 sm:flex-none btn-primary-gradient text-on-primary font-bold py-3 px-12 rounded-xl word-chip-shadow active:scale-95 transition-transform">
+                            Tiếp theo
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Side Navigation (Suppressed based on focused journey, but implemented for shell layout integrity as requested) -->
+<!-- This side nav is hidden on this specific task-focused screen but visible on dashboard layouts -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-full w-64 bg-surface border-r-0 flex-col py-6 px-4 z-40 transform -translate-x-full transition-transform">
+<div class="mb-10 px-4">
+<div class="text-xl font-headline font-bold text-on-surface">Tiến độ học tập</div>
+<div class="text-xs text-on-surface-variant">Level B2 - Upper Intermediate</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Bảng điều khiển</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 bg-primary text-white rounded-xl shadow-lg shadow-primary/20" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-medium">Bài học</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">translate</span>
+<span class="font-medium">Từ vựng</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">mic</span>
+<span class="font-medium">Luyện nói</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">military_tech</span>
+<span class="font-medium">Thành tích</span>
+</a>
+</nav>
+<div class="mt-auto space-y-6">
+<div class="bg-secondary-container p-4 rounded-2xl">
+<div class="text-on-secondary-container font-bold text-sm mb-1">Nâng cấp Premium</div>
+<div class="text-on-secondary-container/70 text-xs mb-3">Mở khóa tất cả bài học nâng cao.</div>
+<button class="w-full bg-secondary text-white py-2 rounded-lg text-xs font-bold">Nâng cấp ngay</button>
+</div>
+<div class="space-y-1">
+<a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all text-sm" href="#">
+<span class="material-symbols-outlined">help</span>
+<span>Trợ giúp</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all text-sm" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Đăng xuất</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Mobile Navigation Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 glass-nav border-t border-surface-container-high py-3 px-6 flex justify-between items-center z-50">
+<button class="flex flex-col items-center space-y-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold">Lộ trình</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-on-surface-variant">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-medium">Thư viện</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-on-surface-variant">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium">Cộng đồng</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-on-surface-variant">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Cá nhân</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,27 @@
+.login {
+  width: min(460px, 100%);
+  margin: 24px auto;
+  padding: 24px;
+}
+
+.login-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.login-form label {
+  font-weight: 600;
+}
+
+.login-form input {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.login-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}

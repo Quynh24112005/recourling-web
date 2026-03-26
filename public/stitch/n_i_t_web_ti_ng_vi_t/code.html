@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#a400a4",
+              "primary-fixed": "#fc5ff5",
+              "surface-container": "#e8e9e3",
+              "outline": "#767773",
+              "surface-tint": "#a400a4",
+              "tertiary": "#3d6600",
+              "outline-variant": "#adada9",
+              "surface-variant": "#dcddd7",
+              "on-tertiary-fixed": "#2c4b00",
+              "primary-dim": "#900090",
+              "secondary": "#6a1cf6",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "surface-container-high": "#e2e3dd",
+              "background": "#f7f7f2",
+              "on-surface": "#2d2f2c",
+              "secondary-container": "#d9caff",
+              "on-primary-fixed": "#000000",
+              "on-tertiary": "#d9ffaa",
+              "tertiary-container": "#b5fd5e",
+              "on-secondary-fixed": "#3e009d",
+              "inverse-on-surface": "#9c9d99",
+              "tertiary-fixed": "#b5fd5e",
+              "on-secondary-container": "#5400ce",
+              "error": "#b41340",
+              "tertiary-fixed-dim": "#a7ee51",
+              "secondary-fixed-dim": "#ccb9ff",
+              "on-error-container": "#510017",
+              "primary-container": "#fc5ff5",
+              "primary-fixed-dim": "#ec50e6",
+              "on-tertiary-fixed-variant": "#406a00",
+              "inverse-primary": "#fc5ff5",
+              "secondary-dim": "#5d00e3",
+              "on-primary-fixed-variant": "#540054",
+              "tertiary-dim": "#355900",
+              "on-error": "#ffefef",
+              "secondary-fixed": "#d9caff",
+              "on-secondary": "#f7f0ff",
+              "inverse-surface": "#0d0f0c",
+              "on-background": "#2d2f2c",
+              "on-tertiary-container": "#395f00",
+              "surface-container-low": "#f1f1ec",
+              "surface-bright": "#f7f7f2",
+              "on-primary": "#ffeef8",
+              "surface-dim": "#d3d5cf",
+              "surface-container-highest": "#dcddd7",
+              "on-primary-container": "#440044",
+              "error-dim": "#a70138",
+              "error-container": "#f74b6d",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#f7f7f2",
+              "on-surface-variant": "#5a5c58"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .active-matching-card {
+        box-shadow: 0 4px 16px rgba(164, 0, 164, 0.15);
+        border: 2px solid #a400a4;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased min-h-screen flex">
+<!-- SideNavBar (Shared Component) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#f7f7f2] dark:bg-stone-900 flex flex-col gap-2 p-4 z-40">
+<div class="mb-8 px-4">
+<span class="text-2xl font-black text-primary tracking-tight font-headline">Linguist Pro</span>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-[#dcddd7] dark:bg-stone-800 text-[#a400a4] rounded-xl font-bold transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label">Bài học</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#2d2f2c] dark:text-stone-400 hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span class="font-label">Thư viện</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#2d2f2c] dark:text-stone-400 hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label">Cộng đồng</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#2d2f2c] dark:text-stone-400 hover:translate-x-1 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label">Hồ sơ</span>
+</a>
+</div>
+<div class="mt-auto p-4 bg-surface-container-low rounded-2xl">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Cấp độ 12</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Chuyên gia</p>
+</div>
+</div>
+<button class="w-full py-2 bg-primary text-on-primary rounded-xl text-sm font-bold shadow-sm active:scale-95 transition-transform">
+                Nâng cấp Pro
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-64 min-h-screen flex flex-col">
+<!-- Header / Progress Area -->
+<header class="fixed top-0 right-0 left-64 glass-effect z-30 px-8 py-4">
+<div class="max-w-4xl mx-auto flex items-center gap-6">
+<button class="p-2 hover:bg-surface-container-highest rounded-full transition-colors active:scale-90">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="close">close</span>
+</button>
+<div class="flex-1 h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[65%] rounded-full relative">
+<div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 bg-tertiary-container/30 text-on-tertiary-container rounded-full">
+<span class="material-symbols-outlined text-sm" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-sm font-bold">5</span>
+</div>
+</div>
+</header>
+<!-- Exercise Body -->
+<section class="flex-1 mt-24 mb-32 px-8 overflow-y-auto">
+<div class="max-w-4xl mx-auto">
+<!-- Instruction Section -->
+<div class="mb-12">
+<h1 class="text-3xl font-headline font-extrabold text-on-surface mb-3">Nối từ với tranh</h1>
+<p class="text-lg text-on-surface-variant font-medium">Hãy nối từ với tranh phù hợp để hoàn thành bài tập.</p>
+</div>
+<!-- Bento Matching Grid -->
+<div class="grid grid-cols-2 gap-12 items-center">
+<!-- Images Column -->
+<div class="space-y-6">
+<!-- Image Card 1 -->
+<div class="group relative aspect-[4/3] bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="vibrant 3D illustration of a friendly orange rooster standing on a soft green meadow with bright morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdZNipcGP6QY9WEg9R3AecHqSWNtVoJEgjY8YAtrcjFNjmrxodu5VmUGQ1zd2qrGpjbJDa63LjMfvraDaJW1y2smMTL0SU_r8SqZ-81KBzhYAnUs3QmPvYF1qmRk-BUBlAQ2CIVOVJ98fbk1vlvRoJ4xPNX-r1UEN2gk0DsUALA6w0h4GfdB4Pcy3tOgTDjPX4Tc-YfW0xmm0KW-92z09Bw0gWIJdl0osymqCAcHEh3Q_9x-MIgBq8aPGjGyPxa1AvaeuKBSRzxhY"/>
+<div class="absolute top-4 right-4 w-8 h-8 rounded-full glass-effect flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Image Card 2 -->
+<div class="group relative aspect-[4/3] bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="whimsical 3D render of a colorful tropical fish swimming in clear blue water with bubbles and soft coral in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVGn_boZUQ7pqzHVtSMZUxvDtIy2FGs3O4fkl3T2T9WYQ5A-zEd8_bQOYyCKb7ySDKJavfWc0VqJHKmQ_Lpvs0BYRf39ywy10uBfgcFciGi-88X9pI8JhTIOuLP8FVst0KSw6BijEqDbc6N37LJxP6FqZnsf1VxNsRnyjZjy7w19OpGEyHpMOWoADZP-Asnk2Q3lm4oQZc2HDOBM3_OnYFj8V8yxa-0MysDt3UceQuTdcxjmkCirMCSIzi_keuN2Eo9EzMaT2RlVw"/>
+<div class="absolute top-4 right-4 w-8 h-8 rounded-full glass-effect flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Image Card 3 -->
+<div class="group relative aspect-[4/3] bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="cute 3D cartoon style cow grazing in a field with wildflowers under a soft blue sky with puffy white clouds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmMmDjONZpP65u3-bOp01Ntuh6tV410N1STj5xN7duNhGYFC5BI87P3WGQkBbcCe09ecbCYE4ceTr48fIhwGGxjKlV5jXT1O7vu8SEX3mSjI9Zc6mNNFLWJuDgAUIS6RBp1ep7YTFcMz_57bq4DdW1vR-e-u65xA5kP1qWrpG5Wzhc8c7RsKYQ6w8OfIT-bPs0yrYprD3s-7Az_8AFPJhAqXFhaCJr9zFPl_kVNrwwpMF06h1BhUL4zPs3I2CjJiJAPeVLEsdz0D8"/>
+<div class="absolute top-4 right-4 w-8 h-8 rounded-full glass-effect flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</div>
+</div>
+</div>
+<!-- Labels Column -->
+<div class="space-y-6">
+<!-- Label Card 1 (Active/Selected State Example) -->
+<div class="group flex items-center justify-between p-8 bg-surface-container-lowest rounded-3xl active-matching-card transition-all duration-300 cursor-pointer">
+<span class="text-2xl font-bold text-primary font-headline tracking-tight">Con cá</span>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Label Card 2 -->
+<div class="group flex items-center justify-between p-8 bg-surface-container-lowest rounded-3xl border-2 border-transparent shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer">
+<span class="text-2xl font-bold text-on-surface font-headline tracking-tight group-hover:text-primary transition-colors">Con bò</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<!-- Label Card 3 -->
+<div class="group flex items-center justify-between p-8 bg-surface-container-lowest rounded-3xl border-2 border-transparent shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer">
+<span class="text-2xl font-bold text-on-surface font-headline tracking-tight group-hover:text-primary transition-colors">Con gà</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="drag_indicator">drag_indicator</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Action Bar -->
+<footer class="fixed bottom-0 right-0 left-64 p-6 bg-surface-container-lowest border-t border-outline-variant/15 flex justify-center z-30">
+<div class="max-w-4xl w-full flex justify-between items-center">
+<button class="px-8 py-4 text-on-surface-variant font-bold hover:bg-surface-container rounded-2xl transition-colors">
+                    Bỏ qua
+                </button>
+<button class="px-12 py-4 bg-primary text-on-primary font-bold text-lg rounded-2xl shadow-lg shadow-primary/20 hover:bg-primary-dim active:scale-95 transition-all flex items-center gap-2">
+                    Tiếp theo
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</footer>
+</main>
+<!-- Decorative Canvas Elements -->
+<div class="fixed top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="fixed bottom-20 left-80 w-48 h-48 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+</body></html>

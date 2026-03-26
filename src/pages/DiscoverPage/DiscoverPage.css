@@ -1,0 +1,75 @@
+.discover-page {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+}
+
+.discover-page-hero {
+  background: linear-gradient(140deg, #f5e8f7 0%, #eedff2 100%);
+  border-radius: 24px;
+  padding: 30px;
+}
+
+.discover-page-hero span {
+  display: inline-block;
+  background: #e8c9ef;
+  color: #8f2aa0;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 4px 11px;
+}
+
+.discover-page-hero h1 {
+  margin-top: 10px;
+  font-size: clamp(34px, 4.4vw, 62px);
+  line-height: 1;
+  letter-spacing: -1.3px;
+  color: #3f0a4b;
+}
+
+.discover-page-hero p {
+  margin-top: 10px;
+  max-width: 640px;
+  color: #575760;
+  font-size: 15px;
+}
+
+.discover-page-hero a {
+  margin-top: 18px;
+  display: inline-block;
+  background: linear-gradient(180deg, #b900b5 0%, #9300ac 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 11px 18px;
+  font-weight: 700;
+}
+
+.discover-page-cards {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.discover-page-cards article {
+  background: #fcfcff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.discover-page-cards h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.discover-page-cards p {
+  margin: 0;
+  color: #65656d;
+}
+
+@media (max-width: 900px) {
+  .discover-page-cards {
+    grid-template-columns: 1fr;
+  }
+}

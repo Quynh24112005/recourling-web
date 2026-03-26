@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#e2e3dd",
+              "on-tertiary-container": "#395f00",
+              "on-primary": "#ffeef8",
+              "surface-dim": "#d3d5cf",
+              "on-primary-fixed-variant": "#540054",
+              "tertiary-dim": "#355900",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "on-secondary": "#f7f0ff",
+              "on-tertiary-fixed": "#2c4b00",
+              "surface-container": "#e8e9e3",
+              "on-background": "#2d2f2c",
+              "outline": "#767773",
+              "secondary-dim": "#5d00e3",
+              "primary-container": "#fc5ff5",
+              "secondary-container": "#d9caff",
+              "tertiary-fixed-dim": "#a7ee51",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#6a1cf6",
+              "primary-fixed-dim": "#ec50e6",
+              "background": "#f7f7f2",
+              "on-surface-variant": "#5a5c58",
+              "on-secondary-fixed": "#3e009d",
+              "tertiary": "#3d6600",
+              "inverse-primary": "#fc5ff5",
+              "error": "#b41340",
+              "on-tertiary-fixed-variant": "#406a00",
+              "surface-tint": "#a400a4",
+              "inverse-on-surface": "#9c9d99",
+              "on-error-container": "#510017",
+              "secondary-fixed-dim": "#ccb9ff",
+              "on-primary-fixed": "#000000",
+              "surface-container-highest": "#dcddd7",
+              "on-tertiary": "#d9ffaa",
+              "on-error": "#ffefef",
+              "tertiary-fixed": "#b5fd5e",
+              "on-surface": "#2d2f2c",
+              "tertiary-container": "#b5fd5e",
+              "on-primary-container": "#440044",
+              "secondary-fixed": "#d9caff",
+              "surface-container-low": "#f1f1ec",
+              "primary": "#a400a4",
+              "surface-variant": "#dcddd7",
+              "primary-dim": "#900090",
+              "error-dim": "#a70138",
+              "error-container": "#f74b6d",
+              "surface-bright": "#f7f7f2",
+              "on-secondary-container": "#5400ce",
+              "surface": "#f7f7f2",
+              "outline-variant": "#adada9",
+              "primary-fixed": "#fc5ff5",
+              "inverse-surface": "#0d0f0c"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-nav {
+            background: rgba(247, 247, 242, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #dcddd7; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen sticky left-0 top-0 p-6 bg-surface-container-low w-64 border-r-0 z-40">
+<div class="mb-10 px-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">translate</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-primary font-headline tracking-tight">Linguist Pro</h1>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold">The Lucid Educator</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface hover:bg-surface-container transition-transform hover:translate-x-1 rounded-xl" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-medium">Discover</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface hover:bg-surface-container transition-transform hover:translate-x-1 rounded-xl" href="#">
+<span class="material-symbols-outlined">library_books</span>
+<span class="font-medium">Library</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 bg-primary text-white rounded-xl shadow-lg shadow-primary/20" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">podcasts</span>
+<span class="font-medium">Podcasts</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface hover:bg-surface-container transition-transform hover:translate-x-1 rounded-xl" href="#">
+<span class="material-symbols-outlined">self_improvement</span>
+<span class="font-medium">Meditation</span>
+</a>
+</nav>
+<div class="mt-auto space-y-2">
+<div class="bg-primary/5 p-4 rounded-2xl mb-6 border border-primary/10">
+<p class="text-xs font-bold text-primary mb-2">PRO PLAN</p>
+<p class="text-sm font-medium mb-3">Upgrade to Premium for offline listening</p>
+<button class="w-full bg-primary text-on-primary py-2 rounded-lg text-sm font-bold shadow-md active:scale-95 transition-all">Upgrade Now</button>
+</div>
+<a class="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:bg-surface-container transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:bg-surface-container transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm">Help</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 relative">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-30 glass-nav px-8 py-4 flex justify-between items-center shadow-[0_4px_16px_rgba(45,47,44,0.06)]">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span class="text-sm font-medium font-headline">Back to Podcasts</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group hidden md:block">
+<input class="bg-surface-container-highest border-none rounded-full py-2 pl-10 pr-4 text-sm w-64 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search lessons..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="portrait of a young smiling person with short hair and clear skin in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGiSqWtSBVoDF5GPk_vR5lk-0PQ8XaLu-IHqeRHKpIAiox-cZKi3dZjPoxCOCOVAkxLcf0v75JxepOvE4njipb-fJX0y6L4LxM_p81e2TB1FDmFa5blcWkyxaZr5K5OWwMZpPGTATysLYqxf5bFJTdPkSCSRw581ORy66xvI360hX1lZ9sgKdtOaKyimwIoZyvxsNZI8voYdSG6MMEFfL6tt8vsCsgX7-U1Ka2HNwX-mbBGoQaRagDDRBK75E1G6hZ1ZhUEBCObLA"/>
+</div>
+</div>
+</div>
+</header>
+<div class="max-w-6xl mx-auto px-8 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Player & Visuals -->
+<div class="lg:col-span-5 space-y-10">
+<div class="relative group aspect-square rounded-[2rem] overflow-hidden shadow-2xl shadow-on-surface/10 transform transition-all duration-500 hover:scale-[1.02]">
+<img class="w-full h-full object-cover" data-alt="vintage tram car in an old city street at dusk with glowing windows and warm street lights reflected on wet pavement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAugD6p2RM_CgXxYxta3c4mTHN_Qx-z_tnUNCVBu1yhSlZE0LLR-kY1Sazu7k6rxjXV5vQZrPaALQNMGZxB2wAWHajHkz0s_iqzNIqmkk71hsvvLexjED-JnwegnErrFLjHkgrkwG72MJEUwG5eOWojjDoKXS5o4qcL7wYojSamCgqEx5fSt1Vk6T4CwxRXHQyqO69KTPwIk1O05Univyx_fdYJ1UQm304D6cxb1MhQJVbvBsEmehuIRKTR_eJDFeUgzf2h8Xqtofw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 flex items-center gap-2">
+<div class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold tracking-widest uppercase">Now Playing</div>
+</div>
+</div>
+<!-- Player Controls -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-[0_4px_16px_rgba(45,47,44,0.06)] border border-outline-variant/10">
+<div class="mb-8">
+<div class="flex justify-between text-xs font-bold text-on-surface-variant mb-3 tracking-tighter">
+<span>12:45</span>
+<span>24:00</span>
+</div>
+<div class="relative h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-[53%] bg-primary rounded-full relative">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-primary rounded-full shadow-md"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-3xl">shuffle</span></button>
+<div class="flex items-center gap-8">
+<button class="text-on-surface hover:text-primary transition-all active:scale-90"><span class="material-symbols-outlined text-4xl">replay_5</span></button>
+<button class="w-20 h-20 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+<button class="text-on-surface hover:text-primary transition-all active:scale-90"><span class="material-symbols-outlined text-4xl">forward_5</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-3xl">repeat</span></button>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/10 flex justify-center gap-10">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">speed</span>
+<span class="text-sm font-bold">1.2x</span>
+</button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">cast</span>
+<span class="text-sm font-bold">Devices</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Info & Transcript -->
+<div class="lg:col-span-7 space-y-8">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 bg-error rounded-lg flex items-center justify-center text-white font-bold text-xs">TED</div>
+<span class="text-sm font-bold text-on-surface-variant tracking-wide">TED Talks Daily • Vietnamese</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-extrabold font-headline leading-tight tracking-tight mb-4 text-on-surface">Ký ức về tiếng tàu điện</h2>
+<p class="text-lg text-on-surface-variant font-medium leading-relaxed max-w-2xl">
+                                Khám phá âm thanh di sản của Hà Nội xưa qua những chuyến tàu điện lịch sử và cách tiếng chuông leng keng đã định hình bản sắc đô thị.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-4 items-center">
+<button class="flex items-center gap-2 bg-surface-container-high px-6 py-3 rounded-xl font-bold text-sm hover:bg-surface-container-highest transition-colors active:scale-95">
+<span class="material-symbols-outlined">add_circle</span>
+                                Save to Library
+                            </button>
+<button class="flex items-center gap-2 bg-surface-container-high px-6 py-3 rounded-xl font-bold text-sm hover:bg-surface-container-highest transition-colors active:scale-95">
+<span class="material-symbols-outlined">download</span>
+                                Download
+                            </button>
+<button class="flex items-center gap-2 bg-surface-container-high px-6 py-3 rounded-xl font-bold text-sm hover:bg-surface-container-highest transition-colors active:scale-95">
+<span class="material-symbols-outlined">share</span>
+                                Share
+                            </button>
+</div>
+<!-- Transcript Section -->
+<div class="bg-surface-container-low rounded-[2rem] p-8">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-bold font-headline">Transcript</h3>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                                    Translate to English <span class="material-symbols-outlined text-sm">translate</span>
+</button>
+</div>
+<div class="space-y-6 h-[400px] overflow-y-auto pr-4 scroll-smooth">
+<div class="flex gap-4 group">
+<span class="text-xs font-bold text-primary shrink-0 pt-1">00:00</span>
+<p class="text-on-surface-variant leading-relaxed">Tiếng leng keng của tàu điện từng là nhịp thở của Hà Nội suốt hơn chín thập kỷ. Nó không chỉ là một phương tiện giao thông, mà còn là một phần hồn cốt của phố phường.</p>
+</div>
+<div class="flex gap-4 group">
+<span class="text-xs font-bold text-on-surface-variant shrink-0 pt-1">02:15</span>
+<p class="text-on-surface-variant leading-relaxed">Hãy tưởng tượng những buổi sáng sương mù, khi ánh đèn vàng mờ ảo của con tàu hiện ra từ xa, mang theo những gánh hàng hoa và âm thanh rộn rã.</p>
+</div>
+<div class="flex gap-4 bg-primary/5 p-4 rounded-2xl ring-1 ring-primary/20">
+<span class="text-xs font-bold text-primary shrink-0 pt-1">12:45</span>
+<p class="text-on-surface font-semibold leading-relaxed">Ngày nay, dù đường ray đã không còn, nhưng trong tâm trí của những người con Hà Nội, âm thanh ấy vẫn vang vọng như một bản nhạc của quá khứ, đầy hoài niệm và tự hào.</p>
+</div>
+<div class="flex gap-4 group">
+<span class="text-xs font-bold text-on-surface-variant shrink-0 pt-1">15:30</span>
+<p class="text-on-surface-variant leading-relaxed">Chúng ta cần làm gì để bảo tồn những giá trị phi vật thể này trong một thế giới hiện đại đầy tiếng ồn của động cơ và công nghiệp?</p>
+</div>
+<div class="flex gap-4 group">
+<span class="text-xs font-bold text-on-surface-variant shrink-0 pt-1">18:10</span>
+<p class="text-on-surface-variant leading-relaxed">Chuyên gia văn hóa Nguyễn Hoàng sẽ chia sẻ về dự án số hóa âm thanh đường phố đang được thực hiện tại các thành phố lớn ở Đông Nam Á.</p>
+</div>
+</div>
+</div>
+<!-- Recommended -->
+<div class="space-y-4">
+<h4 class="text-lg font-bold font-headline px-2">Up Next</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex gap-4 hover:shadow-lg transition-shadow border border-outline-variant/5">
+<img class="w-16 h-16 rounded-xl object-cover" data-alt="close up of hot Vietnamese drip coffee with condensed milk in a glass cup on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAROEaBbObZGin2yXTWKFUj4TfysfMO1-2GsKFz__ZDhrY6sdMSL08BO5NMygWR_vlP3lWwTyVkdiVyoP2CqPoBnAqLg_bbSvuXHHsIVZVGwifR94IM2giv7AGySmbovvVJbIh4owISFM1Zap6ef10AINLuIvjFCr7iRqpm-HBFcESjS3qV56sf0NmJDELgAqsUdZRde-hgR7rwa6YBsCzi8XMXzpn9V6NNqcY3mK2RgZk2oviotEeuCUybxEIA0KhUF8WfcrMPFkc"/>
+<div>
+<p class="text-sm font-bold mb-1">Cà phê sữa đá &amp; Văn hóa</p>
+<p class="text-xs text-on-surface-variant">18 mins remaining</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex gap-4 hover:shadow-lg transition-shadow border border-outline-variant/5">
+<img class="w-16 h-16 rounded-xl object-cover" data-alt="vibrant neon lights of a bustling Asian night market with street food stalls and blurred movement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiZ0ALegPBJ9O1MAM2mS2fIMtv3yXpMvNrdgx564oZqBBuDBJHOXvT3967eYa8Ov2RCa8mvI7pFzqEzbktUvXmK70CcuIxyxWodHU6LbOvsL_t8dVw3yeP18Lz5RLUOVfmUON-GbPXrRDLf_g6Kj4TaKFsHF22WV_2ExQj92oZsg8OENhf67TlTGZKa0uwpHMM-B6q6TYUlASwUTDJCwKON44drxDFtDQll8Uhf2FSQAv8-aXnW5cumNYCQvXy59BB1Xpl0C3qCZY"/>
+<div>
+<p class="text-sm font-bold mb-1">Nhịp sống Chợ đêm</p>
+<p class="text-xs text-on-surface-variant">Next: 24 mins</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="lg:hidden fixed bottom-0 left-0 right-0 glass-nav py-3 px-6 flex justify-around items-center border-t border-outline-variant/10 z-50">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold">Discover</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">library_books</span>
+<span class="text-[10px] font-bold">Library</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">podcasts</span>
+<span class="text-[10px] font-bold">Podcasts</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

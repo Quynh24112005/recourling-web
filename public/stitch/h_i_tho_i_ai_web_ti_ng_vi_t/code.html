@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-dim": "#355900",
+              "secondary-dim": "#5d00e3",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "primary-container": "#fc5ff5",
+              "error-container": "#f74b6d",
+              "surface-variant": "#dcddd7",
+              "surface-bright": "#f7f7f2",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#d9caff",
+              "secondary-container": "#d9caff",
+              "on-error": "#ffefef",
+              "tertiary-fixed-dim": "#a7ee51",
+              "surface": "#f7f7f2",
+              "background": "#f7f7f2",
+              "on-surface-variant": "#5a5c58",
+              "surface-container-highest": "#dcddd7",
+              "error": "#b41340",
+              "on-secondary": "#f7f0ff",
+              "outline": "#767773",
+              "surface-container": "#e8e9e3",
+              "primary-fixed-dim": "#ec50e6",
+              "inverse-surface": "#0d0f0c",
+              "on-background": "#2d2f2c",
+              "error-dim": "#a70138",
+              "on-tertiary-fixed": "#2c4b00",
+              "on-tertiary-container": "#395f00",
+              "on-tertiary-fixed-variant": "#406a00",
+              "on-primary-fixed-variant": "#540054",
+              "primary": "#a400a4",
+              "tertiary": "#3d6600",
+              "tertiary-container": "#b5fd5e",
+              "tertiary-fixed": "#b5fd5e",
+              "on-surface": "#2d2f2c",
+              "on-secondary-container": "#5400ce",
+              "on-tertiary": "#d9ffaa",
+              "inverse-on-surface": "#9c9d99",
+              "primary-dim": "#900090",
+              "surface-tint": "#a400a4",
+              "secondary-fixed-dim": "#ccb9ff",
+              "on-error-container": "#510017",
+              "outline-variant": "#adada9",
+              "on-primary": "#ffeef8",
+              "surface-dim": "#d3d5cf",
+              "on-primary-fixed": "#000000",
+              "primary-fixed": "#fc5ff5",
+              "on-secondary-fixed": "#3e009d",
+              "on-primary-container": "#440044",
+              "inverse-primary": "#fc5ff5",
+              "secondary": "#6a1cf6",
+              "surface-container-low": "#f1f1ec",
+              "surface-container-high": "#e2e3dd"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Be Vietnam Pro', sans-serif; }
+      h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex overflow-hidden">
+<!-- SideNavBar (Execution from JSON) -->
+<aside class="h-screen w-64 border-r-0 bg-[#f7f7f2] dark:bg-stone-900 flex flex-col h-full py-6 px-4 shrink-0">
+<div class="mb-10 px-2">
+<h1 class="text-xl font-bold text-[#a400a4] tracking-tight">Lucid Educator</h1>
+<p class="text-xs text-on-surface-variant font-medium mt-1">Học tập không giới hạn</p>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Khám phá -->
+<a class="flex items-center gap-3 p-3 rounded-xl transition-colors duration-200 text-[#2d2f2c] dark:text-stone-400 hover:text-[#a400a4] hover:bg-[#f1f1ec] dark:hover:bg-stone-800 font-['Plus_Jakarta_Sans'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span>Khám phá</span>
+</a>
+<!-- Hội thoại AI (Active State) -->
+<a class="flex items-center gap-3 p-3 rounded-xl transition-transform scale-95 text-[#a400a4] dark:text-fuchsia-400 font-bold border-r-4 border-[#a400a4] bg-white/50 dark:bg-white/5 font-['Plus_Jakarta_Sans'] text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="chat_spark" style="font-variation-settings: 'FILL' 1;">chat_spark</span>
+<span>Hội thoại AI</span>
+</a>
+<!-- Thư viện -->
+<a class="flex items-center gap-3 p-3 rounded-xl transition-colors duration-200 text-[#2d2f2c] dark:text-stone-400 hover:text-[#a400a4] hover:bg-[#f1f1ec] dark:hover:bg-stone-800 font-['Plus_Jakarta_Sans'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Thư viện</span>
+</a>
+<!-- Cá nhân -->
+<a class="flex items-center gap-3 p-3 rounded-xl transition-colors duration-200 text-[#2d2f2c] dark:text-stone-400 hover:text-[#a400a4] hover:bg-[#f1f1ec] dark:hover:bg-stone-800 font-['Plus_Jakarta_Sans'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span>Cá nhân</span>
+</a>
+</nav>
+<div class="mt-auto p-4 rounded-2xl bg-primary/10 border border-primary/5">
+<p class="text-xs font-bold text-primary mb-2 uppercase tracking-wider">Học tập thông minh</p>
+<button class="w-full py-2 px-4 bg-primary text-on-primary rounded-xl text-xs font-bold transition-all hover:opacity-90 active:scale-95">
+                Nâng cấp Premium
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col relative overflow-hidden bg-surface">
+<!-- TopAppBar (Execution from JSON) -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-8 h-16 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#a400a4]">Lucid AI</span>
+<nav class="hidden md:flex gap-6 items-center font-['Plus_Jakarta_Sans'] font-semibold">
+<a class="text-[#2d2f2c] dark:text-stone-300 hover:text-[#6a1cf6] transition-all" href="#">Hướng dẫn</a>
+<a class="text-[#2d2f2c] dark:text-stone-300 hover:text-[#6a1cf6] transition-all" href="#">Cộng đồng</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors opacity-80 hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors opacity-80 hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden bg-surface-container-highest ml-2">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly young man with a warm smile and professional attire, soft studio lighting on a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkhOEMycDtC-roZd4aQ-R39QpFDbkWt-HDyhsyAe4WFXYgG1WoJ7Bv4u5ij3ETZqwX3aufpi2623wyZ5pvrpanmxO16AqJOcgvWLICcQfEEEKvRTjec2wxZ-gI5T7AHb-I4F3HplL1X9vfQtNW_44-NoVG0a9QAKSmd5de_tb05cRKcNZs1fFKghgltx4FO8AqiALn4Kab-6JAugTtEXX3qHKFL1Nt_69FYg28zlTl3vQOAWt13HcK8CwCt5mq3TpahuiFti8k6Gw"/>
+</div>
+</div>
+</header>
+<!-- Main Interaction Area -->
+<section class="flex-1 flex overflow-hidden p-8 gap-8">
+<!-- Left Panel: Contextual Visual (Asymmetric Bento Component) -->
+<div class="w-1/3 flex flex-col gap-6">
+<div class="flex-1 bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm relative group">
+<img alt="Gia đình đang ăn cơm" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A happy Vietnamese family gathered around a wooden table in a sunlit dining room, sharing a traditional meal with steaming bowls of rice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkTRjOzC38o6HP_-hwFqIJzZVvaXN_iSZcll25p_x8XvbKUeNncYi50KLi1M-Hu3nPGAUWWSVYTO2FToQlGjs_UQjSUD3WJ5JBs0WRzCT94qHOHaTShWMtCOMlYapNjyAQ1hcHubVM7d9Xz1F9Aq3ROTpgBwRM3A7r7DOGHCwbTai6nvXjcE-o_DuhTQryyunnMshIH011cJupnGAfS22u5OB5HfX_nMhHsilJGAZh8D8TBbXD386mrPZTfmsSG70vs2Sm9HOSRyc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-bold text-white uppercase tracking-widest border border-white/30">Ngữ cảnh hiện tại</span>
+<h3 class="text-white font-headline font-bold text-xl mt-2">Bữa cơm gia đình</h3>
+</div>
+</div>
+<div class="h-32 bg-surface-container-low rounded-[2rem] p-6 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-tertiary uppercase tracking-wider mb-1">Mục tiêu</span>
+<p class="font-body text-sm font-medium">Mô tả hành động của mọi người trong ảnh</p>
+</div>
+<div class="w-12 h-12 bg-tertiary-container rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="task_alt">task_alt</span>
+</div>
+</div>
+</div>
+<!-- Right Panel: Chat Interface (High-end Editorial Layout) -->
+<div class="flex-1 flex flex-col bg-surface-container-low rounded-[2rem] overflow-hidden relative">
+<!-- Chat History -->
+<div class="flex-1 overflow-y-auto p-10 space-y-8">
+<!-- AI Question -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="bg-surface-container-lowest rounded-2xl rounded-bl-none p-5 shadow-sm border border-outline-variant/10">
+<p class="font-body text-on-surface leading-relaxed">Mọi người đang làm gì?</p>
+</div>
+<span class="mt-2 ml-1 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Lucid AI • 10:24</span>
+</div>
+<!-- User Answer (With Error) -->
+<div class="flex flex-col items-end self-end max-w-[85%]">
+<div class="bg-primary text-on-primary rounded-2xl rounded-br-none p-5 shadow-sm">
+<p class="font-body leading-relaxed">Mọi người đang đang ăn mỳ</p>
+</div>
+<span class="mt-2 mr-1 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest text-right">Bạn • 10:25</span>
+</div>
+<!-- AI Feedback (Correction) -->
+<div class="flex flex-col items-start max-w-[85%] animate-fade-in">
+<div class="bg-white rounded-2xl rounded-bl-none p-5 shadow-sm border-l-4 border-error/50">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-error text-lg" data-icon="error_outline">error_outline</span>
+<span class="text-xs font-bold text-error uppercase">Gợi ý sửa lỗi</span>
+</div>
+<p class="font-body text-on-surface leading-relaxed italic">Phải là 'cơm' nha!</p>
+<p class="mt-3 text-xs text-on-surface-variant leading-relaxed">Trong văn hóa Việt Nam, bữa cơm gia đình thường ăn cơm. Trong ảnh cũng là các bát cơm trắng.</p>
+</div>
+</div>
+</div>
+<!-- Voice Input Controls & Progress -->
+<div class="p-8 bg-surface-container-lowest/50 backdrop-blur-sm">
+<!-- Progress Bar (Sleek Modern) -->
+<div class="mb-8">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Tiến trình bài học</span>
+<span class="text-sm font-bold text-primary">65%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 65%"></div>
+</div>
+</div>
+<!-- Voice Control Cluster -->
+<div class="flex flex-col items-center gap-6">
+<div class="relative">
+<!-- Visual Waveform Decoration -->
+<div class="absolute inset-0 -m-4 flex items-center justify-around">
+<div class="h-8 w-1 bg-primary/20 rounded-full animate-pulse"></div>
+<div class="h-12 w-1 bg-primary/30 rounded-full animate-pulse delay-75"></div>
+<div class="h-16 w-1 bg-primary/40 rounded-full animate-pulse delay-150"></div>
+<div class="h-12 w-1 bg-primary/30 rounded-full animate-pulse delay-75"></div>
+<div class="h-8 w-1 bg-primary/20 rounded-full animate-pulse"></div>
+</div>
+<!-- Primary CTA: Record Button -->
+<button class="relative z-10 w-20 h-20 rounded-full bg-gradient-to-br from-[#a400a4] to-[#900090] text-white flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95 group">
+<span class="material-symbols-outlined text-4xl" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+<p class="font-headline font-semibold text-on-surface-variant text-sm tracking-tight">Đang lắng nghe...</p>
+<div class="flex gap-4 w-full justify-center">
+<button class="px-6 py-3 rounded-xl bg-surface-container-highest font-bold text-sm text-on-surface hover:bg-surface-container-high transition-colors">
+                                Gõ câu trả lời
+                            </button>
+<button class="px-6 py-3 rounded-xl bg-primary text-on-primary font-bold text-sm shadow-sm hover:opacity-90 transition-opacity">
+                                Tiếp tục bài học
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button (Suppressed as per rule: Not Home/Dashboard) -->
+</body></html>

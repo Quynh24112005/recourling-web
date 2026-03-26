@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#dcddd7",
+              "surface-container-highest": "#dcddd7",
+              "secondary-fixed": "#d9caff",
+              "on-secondary-container": "#5400ce",
+              "surface-dim": "#d3d5cf",
+              "tertiary": "#3d6600",
+              "surface": "#f7f7f2",
+              "inverse-primary": "#fc5ff5",
+              "primary-fixed": "#fc5ff5",
+              "on-primary-fixed": "#000000",
+              "on-surface-variant": "#5a5c58",
+              "primary-dim": "#900090",
+              "on-secondary": "#f7f0ff",
+              "tertiary-container": "#b5fd5e",
+              "on-tertiary-container": "#395f00",
+              "secondary-dim": "#5d00e3",
+              "on-tertiary-fixed": "#2c4b00",
+              "background": "#f7f7f2",
+              "tertiary-fixed": "#b5fd5e",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#6a1cf6",
+              "secondary-fixed-dim": "#ccb9ff",
+              "inverse-surface": "#0d0f0c",
+              "on-secondary-fixed": "#3e009d",
+              "on-error": "#ffefef",
+              "on-primary-fixed-variant": "#540054",
+              "secondary-container": "#d9caff",
+              "on-error-container": "#510017",
+              "tertiary-fixed-dim": "#a7ee51",
+              "primary-fixed-dim": "#ec50e6",
+              "outline": "#767773",
+              "on-background": "#2d2f2c",
+              "tertiary-dim": "#355900",
+              "surface-container-low": "#f1f1ec",
+              "primary": "#a400a4",
+              "on-tertiary": "#d9ffaa",
+              "outline-variant": "#adada9",
+              "on-surface": "#2d2f2c"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .primary-gradient {
+        background: linear-gradient(135deg, #a400a4 0%, #900090 100%);
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation (Shell suppressed for Transactional View, using only Brand Anchor) -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7f7f2]/80 backdrop-blur-xl flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="font-headline font-bold text-2xl tracking-tight text-primary">Linguist Pro</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-variant/50 p-2 rounded-full transition-all duration-200">help_outline</button>
+</div>
+</nav>
+<main class="min-h-screen flex items-center justify-center px-4 pt-20 pb-12 relative overflow-hidden">
+<!-- Background Accents (Editorial Texture) -->
+<div class="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl"></div>
+<!-- Login Container -->
+<div class="w-full max-w-md z-10">
+<div class="glass-effect rounded-[2rem] p-8 md:p-12 shadow-[0_16px_48px_rgba(45,47,44,0.06)] border border-outline-variant/15">
+<!-- Header Section -->
+<div class="text-center mb-10">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-3xl bg-primary-container/20 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">neurology</span>
+</div>
+<h1 class="font-headline text-3xl font-bold text-on-surface mb-2">Chào mừng trở lại</h1>
+<p class="text-on-surface-variant">Tiếp tục hành trình chinh phục ngôn ngữ của bạn</p>
+</div>
+<!-- Error State Banner -->
+<div class="mb-6 p-4 bg-on-error rounded-xl flex items-center gap-3 border border-error/10 animate-pulse">
+<span class="material-symbols-outlined text-error text-xl">error</span>
+<p class="text-sm font-medium text-on-error-container">Tên đăng nhập hoặc mật khẩu không chính xác.</p>
+</div>
+<!-- Login Form -->
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Tên đăng nhập</label>
+<div class="relative group">
+<input class="w-full h-14 px-5 bg-surface-container-highest border-transparent rounded-xl focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all duration-300 placeholder:text-outline/60 outline-none" placeholder="username@example.com" type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-4 text-outline/40 group-focus-within:text-primary transition-colors">person</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center ml-1">
+<label class="block text-sm font-semibold text-on-surface-variant">Mật khẩu</label>
+<a class="text-xs font-bold text-primary hover:underline" href="#">Quên mật khẩu?</a>
+</div>
+<div class="relative group">
+<input class="w-full h-14 px-5 bg-surface-container-highest border-transparent rounded-xl focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all duration-300 placeholder:text-outline/60 outline-none" placeholder="••••••••" type="password"/>
+<span class="material-symbols-outlined absolute right-4 top-4 text-outline/40 group-focus-within:text-primary transition-colors">lock</span>
+</div>
+</div>
+<button class="w-full h-14 primary-gradient text-on-primary font-bold rounded-xl shadow-lg active:scale-95 transition-all duration-200" type="submit">
+                        Đăng nhập
+                    </button>
+</form>
+<!-- Divider -->
+<div class="relative my-10">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant/15"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-4 bg-surface-container-lowest/50 text-on-surface-variant font-medium">Hoặc đăng nhập với</span>
+</div>
+</div>
+<!-- Social Logins -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<button class="flex items-center justify-center gap-3 h-12 bg-surface-container-low hover:bg-surface-container transition-colors rounded-xl border border-outline-variant/10 group">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Official Google G color logo icon on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA97t5IhLTDPlRfpBb0vjb2gYTdG5rB5AQccoJRhibsLfwihVryLfCiE9ROgY9TIgnAsWoH8a4q3PfzQd9S2GI_5Jhat0eNVsSMldiPgLKWvxguFEqMo_iT7eArml4DQTpPyEzqM9zBWhgCapDCElm1RRRZnK-_bXB0YTnriwhyv9bchB8OyyGQrL9Q1-Kl3Po7sjgys5ZLoJUy1HVelaH9HXWeDX-kO8UX5SREm0YnGHJstA9KxbLUDRVdTWQcS7AOMm-ZGW1w-a4"/>
+<span class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 h-12 bg-surface-container-low hover:bg-surface-container transition-colors rounded-xl border border-outline-variant/10 group">
+<svg class="w-5 h-5 text-[#1877F2]" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+<span class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">Facebook</span>
+</button>
+</div>
+<p class="text-center text-sm text-on-surface-variant">
+                    Chưa có tài khoản? 
+                    <a class="font-bold text-primary hover:underline ml-1" href="#">Đăng ký ngay</a>
+</p>
+</div>
+<!-- Supporting Imagery (Editorial Accent) -->
+<div class="mt-12 flex justify-center gap-8 opacity-40">
+<img class="w-12 h-12 rounded-full grayscale hover:grayscale-0 transition-all duration-500" data-alt="soft blurred photo of classic literature books stacked on a wooden desk with warm morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwpDjQLyYA_LcrhUx_8aw64dkDSdLsUOe1CpC4wlhvABGgmPjx7PCYgjZo_6KXvJYb9t4HW5S5mzK8xXq-JImy1sqkpc5eBOHol2bc2id-wFIvDs_M7a6YqvJgLhx2AYWo4iMJ8KPW3MHXUvPyJPuEWKUUnOOhz4jW8e34vZbfyVgP3_HpmFiRw7V71HgfhfBFam5h8ZDp564aF_QH6hnpBMdmxRqJ_kleoKlcx-6aWEsR2tEZDwbPs2jY-QKO9Z8qm8-c9Nn5AuM"/>
+<img class="w-12 h-12 rounded-full grayscale hover:grayscale-0 transition-all duration-500" data-alt="close up of an ink pen resting on a handwritten journal with elegant cursive text in soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJwThIwPoDd_-NKEW1nr9F5xb5SJjXlDS4-wypoTbqjJ6DGkU1BvEKTt-1F4EPmgIMqIaFPhPpk4OJE6FX88dwHk2jR-tbZ1e-x_r5cxbotLJOQbsMkb-ZLk5DqiswE8FVgxP0PKT91VscxaRB7vao6EUZMqDQ42leWCp8lZKHpP_ABu0tr1LR1oPBTXsDIyFAQJWwsTl2qLa3BqsfAX1aM-qyGLeR9GvlPSx1kg346bkcJlX2j0aXE1lZoZ01P0H0sEYU1ti3gB4"/>
+<img class="w-12 h-12 rounded-full grayscale hover:grayscale-0 transition-all duration-500" data-alt="minimalist view of a coffee cup next to a language dictionary on a clean white surface with long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADj8uIRA8pnxowirIze6sD2yquUceAeZLEe5j8U7C3Wxd-gsDDT7ohHQlyxbnuands_c9rnhJe1lCa8eXe_rGZggC7_iRGN9DTkq2_A7dVguJ10iRWOmme7rqne9R70sCQqTnZjLBzgGU70o7V8qNn5n8Cpt_lquGg3FVPDJjfKjQuTsKquQmJTdgaA7SvRzKV_IlrPtMtq_b3I2qkrBaKtL04MJTZFsUnkd6em-J6iWuMIwCcvYY8ExSBNQDIxcee-ghX81YVxqE"/>
+</div>
+</div>
+</main>
+<!-- Simple Transactional Footer -->
+<footer class="w-full bg-[#f7f7f2] py-8 mt-auto">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-body text-sm text-[#2d2f2c]/70">© 2024 Linguist Pro. Editorial Language Learning.</span>
+<div class="flex gap-6">
+<a class="text-sm text-[#2d2f2c]/60 hover:text-[#a400a4] transition-colors" href="#">Privacy</a>
+<a class="text-sm text-[#2d2f2c]/60 hover:text-[#a400a4] transition-colors" href="#">Terms</a>
+<a class="text-sm text-[#2d2f2c]/60 hover:text-[#a400a4] transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

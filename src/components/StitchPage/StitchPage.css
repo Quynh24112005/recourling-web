@@ -1,0 +1,73 @@
+.stitch-page {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.stitch-page-hero {
+  background: linear-gradient(130deg, #ffffff 0%, #f6ecff 100%);
+  border-radius: 28px;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 18px;
+}
+
+.stitch-page-kicker {
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.stitch-page-hero h2 {
+  font-size: clamp(26px, 4vw, 44px);
+  margin-bottom: 8px;
+}
+
+.stitch-page-subtitle {
+  color: var(--on-surface-variant);
+  margin: 0;
+}
+
+.stitch-page-hero .material-symbols-outlined {
+  font-size: 72px;
+  color: #d8b1e7;
+}
+
+.stitch-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.stitch-page-card {
+  background: #fbfbff;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.stitch-page-card .material-symbols-outlined {
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.stitch-page-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.stitch-page-card p {
+  margin: 0;
+  color: var(--on-surface-variant);
+}
+
+@media (max-width: 900px) {
+  .stitch-page-grid {
+    grid-template-columns: 1fr;
+  }
+}

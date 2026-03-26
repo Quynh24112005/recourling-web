@@ -1,0 +1,28 @@
+.community-body { display: grid; grid-template-columns: 1fr 320px; gap: 28px; }
+.post-compose { display: flex; align-items: center; gap: 12px; background: var(--surface-container-lowest); border-radius: 16px; padding: 16px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.compose-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary-container); display: flex; align-items: center; justify-content: center; font-weight: 600; color: var(--on-primary-container); flex-shrink: 0; }
+.compose-input { flex: 1; border: none; background: var(--surface-container); border-radius: 24px; padding: 10px 16px; font-size: 13px; outline: none; }
+.btn-post { padding: 8px 20px; border-radius: 20px; background: var(--primary); color: var(--on-primary); border: none; font-weight: 600; font-size: 13px; cursor: pointer; }
+
+.post-card { background: var(--surface-container-lowest); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.post-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.post-author-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--surface-container); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 12px; flex-shrink: 0; }
+.post-role { margin-left: auto; background: #fce4ec; color: var(--primary); padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 600; }
+.post-card h3 { margin-bottom: 8px; }
+.post-card p { font-size: 13px; color: var(--on-surface-variant); line-height: 1.6; margin-bottom: 12px; }
+.post-footer { display: flex; gap: 16px; font-size: 13px; color: var(--on-surface-variant); align-items: center; }
+
+.community-right {}
+.tip-card-highlight { background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 16px; padding: 24px; color: #fff; margin-bottom: 20px; }
+.tip-card-highlight h3 { margin: 12px 0 8px; font-size: 16px; }
+.tip-card-highlight p { font-size: 12px; opacity: 0.9; margin-bottom: 16px; }
+.btn-outline-sm { padding: 8px 16px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.5); background: transparent; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; }
+
+.challenges-card { background: var(--surface-container-lowest); border-radius: 16px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.challenge-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; }
+.challenge-item small { display: block; font-size: 11px; color: var(--on-surface-variant); }
+.btn-join-sm { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid var(--primary); background: transparent; color: var(--primary); font-weight: 600; font-size: 13px; cursor: pointer; margin-top: 8px; }
+
+.leaderboard-card { background: var(--surface-container-lowest); border-radius: 16px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.leaderboard-card h3 { margin-bottom: 12px; }
+.lb-xp { margin-left: auto; color: var(--primary); font-weight: 600; font-size: 13px; }

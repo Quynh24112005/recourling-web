@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kiểm tra đầu vào - LucidEducator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#f7f0ff",
+              "primary-fixed-dim": "#ec50e6",
+              "surface": "#f7f7f2",
+              "surface-dim": "#d3d5cf",
+              "surface-tint": "#a400a4",
+              "surface-container-highest": "#dcddd7",
+              "on-primary-fixed-variant": "#540054",
+              "on-tertiary": "#d9ffaa",
+              "on-secondary-container": "#5400ce",
+              "surface-variant": "#dcddd7",
+              "inverse-surface": "#0d0f0c",
+              "on-surface": "#2d2f2c",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#3d6600",
+              "primary-fixed": "#fc5ff5",
+              "error": "#b41340",
+              "error-dim": "#a70138",
+              "outline": "#767773",
+              "on-tertiary-fixed": "#2c4b00",
+              "secondary-container": "#d9caff",
+              "on-tertiary-container": "#395f00",
+              "on-background": "#2d2f2c",
+              "secondary-fixed": "#d9caff",
+              "on-error": "#ffefef",
+              "primary-container": "#fc5ff5",
+              "on-surface-variant": "#5a5c58",
+              "outline-variant": "#adada9",
+              "on-primary-fixed": "#000000",
+              "on-primary": "#ffeef8",
+              "inverse-on-surface": "#9c9d99",
+              "surface-bright": "#f7f7f2",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "on-error-container": "#510017",
+              "tertiary-fixed": "#b5fd5e",
+              "secondary-dim": "#5d00e3",
+              "inverse-primary": "#fc5ff5",
+              "tertiary-fixed-dim": "#a7ee51",
+              "background": "#f7f7f2",
+              "on-secondary-fixed": "#3e009d",
+              "on-primary-container": "#440044",
+              "secondary": "#6a1cf6",
+              "surface-container-low": "#f1f1ec",
+              "error-container": "#f74b6d",
+              "primary": "#a400a4",
+              "on-tertiary-fixed-variant": "#406a00",
+              "surface-container": "#e8e9e3",
+              "tertiary-dim": "#355900",
+              "surface-container-high": "#e2e3dd",
+              "primary-dim": "#900090",
+              "secondary-fixed-dim": "#ccb9ff",
+              "tertiary-container": "#b5fd5e"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+      .glass-nav {
+        background: rgba(247, 247, 242, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .tonal-card {
+        transition: transform 0.2s ease, background-color 0.2s ease;
+      }
+      .tonal-card:active {
+        transform: scale(0.98);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+<div class="flex justify-between items-center px-6 py-3 w-full max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#a400a4] tracking-tight font-headline">LucidEducator</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-[#2d2f2c] font-medium hover:text-primary transition-colors" href="#">Khám phá</a>
+<a class="text-[#a400a4] font-bold border-b-2 border-[#a400a4]" href="#">Khóa học</a>
+<a class="text-[#2d2f2c] font-medium hover:text-primary transition-colors" href="#">Thư viện</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-surface-container-highest rounded-full px-4 py-1.5 gap-2">
+<span class="material-symbols-outlined text-outline text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 font-label" placeholder="Tìm kiếm khóa học..." type="text"/>
+</div>
+<button class="p-2 rounded-full hover:bg-[#dcddd7]/50 transition-colors active:scale-95">
+<span class="material-symbols-outlined text-on-surface">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-[#dcddd7]/50 transition-colors active:scale-95">
+<span class="material-symbols-outlined text-on-surface">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile avatar" data-alt="professional headshot of a smiling young woman with warm lighting and soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXZ_wkQtKMcgvQJsBs5OWWcD4kQYy2KJZlPpy9PLiJfnnn7kVnTVNFLwljEGJUD8CmeAga7u2S4uk8U7jF2OAYFaljOMPzlX5WLef6y95bfY5lGPuK4BWieqPIQHO0J3-KOzqa87LmVvdPW8n4iUI8Kw7cG2ca2Iz1Pkr_hRDUgmhDPlOc7S3gHZZe0l1E-PFIl7zsHI9VgVhvJHPfNyWhF4s2wlGHSJECg5tThoXmiFAulCz7qMao_JOlP-szX0uUh2-bnSETxes"/>
+</div>
+</div>
+</div>
+<div class="bg-[#f1f1ec] h-[1px] w-full absolute bottom-0"></div>
+</header>
+<main class="pt-24 pb-12 px-6 min-h-screen flex flex-col items-center">
+<!-- Progress Section -->
+<div class="w-full max-w-4xl mb-12">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h1 class="font-headline font-bold text-xl text-on-surface">Kiểm tra đầu vào</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold font-headline text-primary">65%</span>
+<div class="w-48 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 65%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Exercise Container -->
+<div class="w-full max-w-5xl flex flex-col items-center">
+<div class="text-center mb-10">
+<h2 class="font-headline font-extrabold text-3xl mb-2 tracking-tight">Chọn tranh và từ phù hợp:</h2>
+<p class="text-on-surface-variant font-medium">Kết nối hình ảnh với tên gọi tương ứng của chúng.</p>
+</div>
+<!-- Matching Grid (Editorial Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-4xl relative">
+<!-- Left Column: Images -->
+<div class="flex flex-col gap-6">
+<!-- Image Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-3xl p-4 shadow-[rgba(45,47,44,0.06)_0px_4px_16px] border-2 border-transparent hover:border-primary/20 transition-all cursor-pointer">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden mb-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="vibrant close-up of a rooster with red comb and colorful feathers in a sunlit farm setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJXX7OIOetFjVRJLJU4ryxyWU9VkeQMra86eVsbICHqC_Mze6npnsE6LVUm-KQKaOWi9SQX6MkEMSDRajygUQcF92QFI4FkLR9pDVy_ibCcmLWQcEgJDQytjeuNzbKqmUtbzINRuvcedtBoFTQB27LXaN9RWw8i0R80gw352N3HCslQrkxHa1uYiUBrkUClll9ibvVEK8JWLyNcXsM34FmzjOQuKYD8nSccpopcId07-hL8PmXmfwCyIpJlkCpW6DPcbOYWH1v-NQ"/>
+</div>
+<div class="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-surface-container shadow-sm flex items-center justify-center z-10">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+<!-- Image Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-3xl p-4 shadow-[rgba(45,47,44,0.06)_0px_4px_16px] border-2 border-primary transition-all cursor-pointer">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden mb-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="a bright orange goldfish swimming in clear blue water with soft light reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ-q4nG1_XcCaQRZrhILvLdJrcfllVQH6ifx0Lh7Tc1BmTBYhilGd3txjQdWrOfOa6r2nldkLNFB44sH_Rbfw1Jj-m35xfm-249pAQD6KI5s4CvMLYUbXAyRqzZvihtBvxA_FkGUSIScCPpvNQa49AqXkDEL2wLMma3H4MRq2RDUrQmgA7bFKcdLGCXt6ATta2SsdI1_fkZ0Nizo0NIsldwnQwnKr2PYfnXhyxfz7wWXJkMY9uSdNnzdBVNQ5kDISwmLxEYkNfzBA"/>
+</div>
+<div class="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border-2 border-on-primary shadow-sm flex items-center justify-center z-10">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+</div>
+</div>
+<!-- Image Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-3xl p-4 shadow-[rgba(45,47,44,0.06)_0px_4px_16px] border-2 border-transparent hover:border-primary/20 transition-all cursor-pointer">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden mb-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="a peaceful black and white cow grazing in a lush green mountain meadow under soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtm_aPQDYT5SZYX9MN0sXGzmnL7cyyDcBq7pwxwtrH1JRydJmf7fPmdimlGcblaVRX4t21s-rx5uD5t7Ps-IAZ5D45VnRAoYntT3DTnRlLbaoy-Y1PEDsWEgnwVdeKHy7PN3me-w1qEqECGwo0a6Cjgtvu8h4dy7gP6fgJS9mc37IXyKIIpW1YTXpL2p3EUynN-EMfnzfEBnyc1EXXEILYWfzAu9FNHtooKUW5dyapBqp98GwzQlT8VPQn8T_UehtkhCFaBetVb4A"/>
+</div>
+<div class="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-surface-container shadow-sm flex items-center justify-center z-10">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+</div>
+<!-- Right Column: Words -->
+<div class="flex flex-col gap-6 justify-center">
+<!-- Word Chip 1 -->
+<div class="group relative h-24 flex items-center justify-center bg-surface-container-lowest rounded-2xl shadow-[rgba(45,47,44,0.06)_0px_4px_16px] border-2 border-transparent hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-surface-container shadow-sm flex items-center justify-center z-10">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+<span class="font-headline font-bold text-2xl text-on-surface">Con bò</span>
+</div>
+<!-- Word Chip 2 -->
+<div class="group relative h-24 flex items-center justify-center bg-primary/5 rounded-2xl shadow-[rgba(45,47,44,0.06)_0px_4px_16px] border-2 border-primary transition-all cursor-pointer">
+<div class="absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary border-2 border-on-primary shadow-sm flex items-center justify-center z-10">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+</div>
+<span class="font-headline font-bold text-2xl text-primary">Con cá</span>
+</div>
+<!-- Word Chip 3 -->
+<div class="group relative h-24 flex items-center justify-center bg-surface-container-lowest rounded-2xl shadow-[rgba(45,47,44,0.06)_0px_4px_16px] border-2 border-transparent hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-surface-container shadow-sm flex items-center justify-center z-10">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+<span class="font-headline font-bold text-2xl text-on-surface">Con gà</span>
+</div>
+</div>
+<!-- SVG Connector Logic (Visual Only) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none overflow-visible hidden md:block" style="z-index: 5;">
+<path d="M 440 380 Q 480 380, 520 380" fill="none" stroke="#a400a4" stroke-dasharray="0" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-lowest/80 backdrop-blur-lg py-6 px-6 border-t border-surface-container-low flex justify-center items-center">
+<div class="w-full max-w-4xl flex justify-between items-center">
+<div class="flex items-center gap-4 text-tertiary">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+</div>
+<div>
+<p class="font-bold text-sm uppercase tracking-wider">Lựa chọn hiện tại</p>
+<p class="font-headline font-bold text-on-surface">Đã kết nối 1 cặp</p>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-on-primary font-headline font-extrabold px-12 py-4 rounded-xl shadow-lg transition-all active:scale-95 flex items-center gap-2">
+<span>Hoàn thành</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Side Navigation Placeholder (Hidden for transactional screen as per rule) -->
+<!-- But if needed for top-level context, it stays lg:flex. Here we suppress to focus on the test. -->
+<div class="fixed bottom-8 right-8 z-40 group">
+<!-- Floating Support Action -->
+<button class="w-14 h-14 bg-secondary text-on-secondary rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">help_center</span>
+</button>
+</div>
+</body></html>

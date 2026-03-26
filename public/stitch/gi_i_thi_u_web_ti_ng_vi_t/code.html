@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Linguist Pro - Học tập không giới hạn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-dim": "#355900",
+              "secondary-dim": "#5d00e3",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "primary-container": "#fc5ff5",
+              "error-container": "#f74b6d",
+              "surface-variant": "#dcddd7",
+              "surface-bright": "#f7f7f2",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#d9caff",
+              "secondary-container": "#d9caff",
+              "on-error": "#ffefef",
+              "tertiary-fixed-dim": "#a7ee51",
+              "surface": "#f7f7f2",
+              "background": "#f7f7f2",
+              "on-surface-variant": "#5a5c58",
+              "surface-container-highest": "#dcddd7",
+              "error": "#b41340",
+              "on-secondary": "#f7f0ff",
+              "outline": "#767773",
+              "surface-container": "#e8e9e3",
+              "primary-fixed-dim": "#ec50e6",
+              "inverse-surface": "#0d0f0c",
+              "on-background": "#2d2f2c",
+              "error-dim": "#a70138",
+              "on-tertiary-fixed": "#2c4b00",
+              "on-tertiary-container": "#395f00",
+              "on-tertiary-fixed-variant": "#406a00",
+              "on-primary-fixed-variant": "#540054",
+              "primary": "#a400a4",
+              "tertiary": "#3d6600",
+              "tertiary-container": "#b5fd5e",
+              "tertiary-fixed": "#b5fd5e",
+              "on-surface": "#2d2f2c",
+              "on-secondary-container": "#5400ce",
+              "on-tertiary": "#d9ffaa",
+              "inverse-on-surface": "#9c9d99",
+              "primary-dim": "#900090",
+              "surface-tint": "#a400a4",
+              "secondary-fixed-dim": "#ccb9ff",
+              "on-error-container": "#510017",
+              "outline-variant": "#adada9",
+              "on-primary": "#ffeef8",
+              "surface-dim": "#d3d5cf",
+              "on-primary-fixed": "#000000",
+              "primary-fixed": "#fc5ff5",
+              "on-secondary-fixed": "#3e009d",
+              "on-primary-container": "#440044",
+              "inverse-primary": "#fc5ff5",
+              "secondary": "#6a1cf6",
+              "surface-container-low": "#f1f1ec",
+              "surface-container-high": "#e2e3dd"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #a400a4 0%, #6a1cf6 100%);
+        }
+        .floating-brain {
+            filter: drop-shadow(0 0 30px rgba(164, 0, 164, 0.3));
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-8 h-16 glass-nav shadow-sm">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-primary tracking-tight font-headline">Lucid AI</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-headline font-semibold text-on-surface hover:text-secondary transition-all" href="#">Hướng dẫn</a>
+<a class="font-headline font-semibold text-on-surface hover:text-secondary transition-all" href="#">Cộng đồng</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="ml-2 bg-primary text-on-primary font-headline font-semibold px-6 py-2 rounded-xl hover:opacity-90 transition-all">
+                Bắt đầu học
+            </button>
+</div>
+</nav>
+<main class="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center overflow-hidden px-6 lg:px-24">
+<div class="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="z-10 w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col items-start space-y-8 animate-fade-in">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-high rounded-full border border-outline-variant/15">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-sm font-semibold tracking-wide text-on-surface-variant">AI-POWERED EDUCATION</span>
+</div>
+<div class="space-y-4">
+<h1 class="text-6xl lg:text-7xl font-extrabold font-headline leading-[1.1] tracking-tight text-on-surface">
+                        Linguist <span class="text-primary italic">Pro</span>
+</h1>
+<p class="text-xl lg:text-2xl font-medium text-on-surface-variant max-w-xl leading-relaxed">
+                        Đột phá khả năng ngôn ngữ với trí tuệ nhân tạo. Trải nghiệm học tập cá nhân hóa, mượt mà và đầy cảm hứng.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="hero-gradient text-on-primary font-headline font-bold text-lg px-10 py-4 rounded-xl shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                        Bắt đầu học ngay
+                    </button>
+<button class="flex items-center gap-2 px-8 py-4 bg-surface-container-lowest border border-outline-variant/20 rounded-xl font-headline font-bold text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">play_circle</span>
+                        Xem Demo
+                    </button>
+</div>
+<div class="flex items-center gap-6 pt-4">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="Portrait of a smiling young professional woman with warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNULHO06CRFKMQ_8pBfeQGdmVM4I2D-3zJBrOMvaLN-5Dcit-slmQmFqPv4sSujgW8lhcDsoBFc-4XzLsFwEM5I1EcP5UoLFW3EelJjYvr4ABmtF1wy_xuphNqRfJujWwlco5X6Il13gyT8I3Mbc_014j7Sukbn-qIpas-dktcOpgyH7rmaGpj5I3pfzhJzgSJDuoWg6xpDmYFbdlua99kLJ22_aivwNRoy9tz07N-yyvNtYMEKgsqbGfkS8nFUB8YQcoV24KdaWE"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="Close-up portrait of a young man with a friendly expression in a soft focus urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP-k4y_CdbrcG6W_GO4z3rmo-nTsonmkkQ41aVYYJSFcaLgduAZGHvXoKFNa9EJEhf8Q6g2EBbP4eFFRHJVKsxWUJ-H20GT0zCu5JQcVMSdOsvLlaEAHHjobbtMHRZkBqU6UFe8_WbV5apW5sx34UjKZivsJHcxKId1EeXmzgP2s3Zskd0yDDRnZCPtoB8uaVItkIAQgZ_xptZRWpq1_9FkCt29wF26F9Z3sZJ2iD4N-kF86y4EJijIedNrICU-DkoLUO8eG_aWxw"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="Professional woman looking at camera with a confident smile in an office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuRZsz_r2aoA-8eqP6UYUc-uDXCa1R5yoknb6wcWOsLT_QzcNyzh1E19yWICB1rD7YmA_TXyQNHBcYzukV6luUgBApP9sHXdFKPnO3v96-osB0HtIzfxCZ4d8KkIhBuw27amJBzCcYxcMlgS1wvhk0lO_UyD5cjztiheAy2TU6CBiGYpD5BHqeicMxIeMDms9qa16OdzoGsrCKw8iF11cm963wFcpZcOa6NDecEVCYJR_djUjCtSVZ_qL2h2hW792NDGR_sY_Ja5k"/>
+</div>
+<p class="text-sm text-on-surface-variant font-medium">
+                        Tham gia cùng <span class="text-secondary font-bold">10,000+</span> học viên mỗi ngày
+                    </p>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="relative w-full max-w-lg aspect-square">
+<div class="absolute inset-0 bg-primary/10 rounded-full animate-pulse blur-2xl"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 flex items-center justify-center bg-surface-container-lowest rounded-[3rem] shadow-xl border border-outline-variant/10 floating-brain">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<span class="material-symbols-outlined text-[120px] text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-full h-full border-2 border-dashed border-primary/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
+</div>
+</div>
+</div>
+<div class="absolute -top-4 -right-4 bg-white p-4 rounded-2xl shadow-lg border border-outline-variant/10 flex items-center gap-3 animate-bounce">
+<div class="p-2 bg-tertiary-container rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-container">check_circle</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant">Tiến độ vượt bậc</p>
+<p class="text-[10px] text-tertiary font-bold">+25% hằng tuần</p>
+</div>
+</div>
+<div class="absolute bottom-10 -left-8 bg-white p-4 rounded-2xl shadow-lg border border-outline-variant/10 flex items-center gap-3">
+<div class="p-2 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-secondary">chat_spark</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant">Phản hồi AI</p>
+<p class="text-[10px] text-secondary font-bold">Thời gian thực</p>
+</div>
+</div>
+<div class="absolute top-1/4 -left-12 w-24 h-24 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
+</div>
+</div>
+</div>
+</main>
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 bg-surface-container-lowest rounded-3xl shadow-sm border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">language</span>
+<h3 class="text-xl font-bold font-headline mb-3 text-on-surface">Đa ngôn ngữ</h3>
+<p class="text-on-surface-variant leading-relaxed">Học hơn 30 ngôn ngữ phổ biến nhất thế giới với giáo trình chuẩn quốc tế.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-3xl shadow-sm border border-outline-variant/5">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">bolt</span>
+<h3 class="text-xl font-bold font-headline mb-3 text-on-surface">Học siêu tốc</h3>
+<p class="text-on-surface-variant leading-relaxed">Lộ trình được tối ưu hóa bằng AI giúp bạn nắm bắt kiến thức nhanh hơn 3 lần.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-3xl shadow-sm border border-outline-variant/5">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-4">groups</span>
+<h3 class="text-xl font-bold font-headline mb-3 text-on-surface">Cộng đồng</h3>
+<p class="text-on-surface-variant leading-relaxed">Kết nối với hàng triệu người học và cùng nhau tiến bộ mỗi ngày.</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="py-12 px-8 bg-surface-container-high">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-xl font-black text-primary tracking-tight font-headline">Lucid AI</span>
+<p class="text-sm text-on-surface-variant">© 2024 Linguist Pro. Bản quyền thuộc về Lucid Educator.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary" href="#">Điều khoản</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary" href="#">Bảo mật</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary" href="#">Liên hệ</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#e2e3dd",
+              "on-tertiary-container": "#395f00",
+              "on-primary": "#ffeef8",
+              "surface-dim": "#d3d5cf",
+              "on-primary-fixed-variant": "#540054",
+              "tertiary-dim": "#355900",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "on-secondary": "#f7f0ff",
+              "on-tertiary-fixed": "#2c4b00",
+              "surface-container": "#e8e9e3",
+              "on-background": "#2d2f2c",
+              "outline": "#767773",
+              "secondary-dim": "#5d00e3",
+              "primary-container": "#fc5ff5",
+              "secondary-container": "#d9caff",
+              "tertiary-fixed-dim": "#a7ee51",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#6a1cf6",
+              "primary-fixed-dim": "#ec50e6",
+              "background": "#f7f7f2",
+              "on-surface-variant": "#5a5c58",
+              "on-secondary-fixed": "#3e009d",
+              "tertiary": "#3d6600",
+              "inverse-primary": "#fc5ff5",
+              "error": "#b41340",
+              "on-tertiary-fixed-variant": "#406a00",
+              "surface-tint": "#a400a4",
+              "inverse-on-surface": "#9c9d99",
+              "on-error-container": "#510017",
+              "secondary-fixed-dim": "#ccb9ff",
+              "on-primary-fixed": "#000000",
+              "surface-container-highest": "#dcddd7",
+              "on-tertiary": "#d9ffaa",
+              "on-error": "#ffefef",
+              "tertiary-fixed": "#b5fd5e",
+              "on-surface": "#2d2f2c",
+              "tertiary-container": "#b5fd5e",
+              "on-primary-container": "#440044",
+              "secondary-fixed": "#d9caff",
+              "surface-container-low": "#f1f1ec",
+              "primary": "#a400a4",
+              "surface-variant": "#dcddd7",
+              "primary-dim": "#900090",
+              "error-dim": "#a70138",
+              "error-container": "#f74b6d",
+              "surface-bright": "#f7f7f2",
+              "on-secondary-container": "#5400ce",
+              "surface": "#f7f7f2",
+              "outline-variant": "#adada9",
+              "primary-fixed": "#fc5ff5",
+              "inverse-surface": "#0d0f0c"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(247, 247, 242, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #f7f7f2;
+            color: #2d2f2c;
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar (Shared Component) -->
+<aside class="hidden lg:flex flex-col h-screen sticky left-0 top-0 p-6 bg-[#f7f7f2] dark:bg-[#2d2f2c] w-64 font-['Be_Vietnam_Pro'] text-base z-50">
+<div class="mb-10 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">auto_stories</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-[#a400a4] leading-tight">Linguist Pro</h1>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">The Lucid Educator</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 bg-[#a400a4] text-white rounded-xl shadow-lg shadow-[#a400a4]/20 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-medium">Discover</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#2d2f2c] dark:text-[#f7f7f2] hover:bg-[#f1f1ec] dark:hover:bg-[#3d3f3c] rounded-xl hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">library_books</span>
+<span class="font-medium">Library</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#2d2f2c] dark:text-[#f7f7f2] hover:bg-[#f1f1ec] dark:hover:bg-[#3d3f3c] rounded-xl hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">podcasts</span>
+<span class="font-medium">Podcasts</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#2d2f2c] dark:text-[#f7f7f2] hover:bg-[#f1f1ec] dark:hover:bg-[#3d3f3c] rounded-xl hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">self_improvement</span>
+<span class="font-medium">Meditation</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 space-y-4">
+<div class="p-4 bg-primary-container/10 rounded-2xl border border-primary/10">
+<p class="text-sm font-semibold text-primary mb-2">Upgrade to Premium</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Mở khóa tất cả bài học và tính năng ngoại tuyến.</p>
+</div>
+<div class="space-y-1">
+<a class="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">
+<span class="material-symbols-outlined text-xl">help</span>
+<span>Help</span>
+</a>
+</div>
+</div>
+</aside>
+<main class="flex-1 min-w-0 overflow-y-auto">
+<!-- TopAppBar (Shared Component Overlay) -->
+<header class="sticky top-0 z-40 bg-[#f7f7f2]/80 dark:bg-[#2d2f2c]/80 backdrop-blur-xl shadow-[0_4px_16px_rgba(45,47,44,0.06)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<h2 class="hidden md:block font-['Plus_Jakarta_Sans'] text-2xl font-bold tracking-tight text-[#a400a4]">Discover</h2>
+<div class="relative hidden sm:block w-72">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-highest rounded-full border-none focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Tìm kiếm bài học..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-[#f1f1ec]/50 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface">notifications</span>
+</button>
+<button class="p-2 hover:bg-[#f1f1ec]/50 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border-2 border-white shadow-sm">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Professional headshot of a smiling young person in a creative workspace, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6rl3hCbvgr5Zv6P-FKDrs6uZ_rrbMwpyYOp3_XN0QptWIXyyTIv7sueSbWaS7f7LHiNF_pIMfDDZXycQC0e4TuxxsvGcc8ufQiIh5u8tu-JcZxlztoHkL9Q8yJ1W8i1rd_Ut7BxbVZ5hJDAbGSHPEY4ppqMJvcO3CGPLI1zDEZ3Hh5YUfTreOoARRr-fTT89azYbVKoTVzEs4FOno_kCYpdrMtD0h2GFPLvAUzqXuapyt8KIrVNCZrbwBRTiuUPIb0nZfcmx6kew"/>
+</div>
+</div>
+</div>
+</header>
+<div class="px-8 py-8 max-w-screen-2xl mx-auto space-y-12">
+<!-- Featured Section: Asymmetric Layout -->
+<section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-[2rem] p-8 lg:p-12 shadow-[0_4px_16px_rgba(45,47,44,0.06)] overflow-hidden relative">
+<div class="lg:col-span-7 z-10 space-y-6">
+<span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-bold tracking-wide uppercase">Nổi bật</span>
+<h3 class="font-headline text-4xl lg:text-5xl font-extrabold text-on-surface leading-tight">Hành trình tìm lại tiếng nói</h3>
+<p class="font-body text-lg text-on-surface-variant max-w-xl">
+                            Khám phá sức mạnh của việc học ngôn ngữ thông qua sự tự tin và chánh niệm. Một khóa học đặc biệt kết hợp tâm lý học và ngôn ngữ học.
+                        </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-8 py-4 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/30 hover:shadow-primary/40 active:scale-95 transition-all">
+                                Bắt đầu ngay
+                            </button>
+<button class="px-8 py-4 bg-surface-container-low text-on-surface rounded-xl font-bold hover:bg-surface-container-high transition-all active:scale-95">
+                                Xem chi tiết
+                            </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative h-64 lg:h-96 rounded-3xl overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+<img alt="Meditation and learning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A peaceful woman with closed eyes practicing mindfulness in a sunlit airy minimalist studio, soft pastel colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmqIa3mGEz2630eTDEhkPtbMkxMBlmouF47c3EG4GFpFGD7-6mfCLx0RF204TcDUGkWQ6vWvDicdid9Gz0pMlogBkgJ2tvSS0n5BwboIHxt2yaCTuDHNj8CkvH9UZ8FXvOrm_WsmjGztifI9IhFBnDhZy0oQxeb9m5JqiPUk5xrjCZ1bTWau1XtKWiwebTG0fR4JZ1Nd6kVwYVBnEg9aWp1u0nAey4CF6nNuLiSu-ohfAycYjHeFUcNuXFnjEvaoGzHLhtQrXy7Pc"/>
+<div class="absolute bottom-6 left-6 right-6 p-4 glass-nav rounded-2xl flex items-center justify-between border border-white/20">
+<div>
+<p class="text-xs font-bold text-primary uppercase">Chuyên đề</p>
+<p class="text-sm font-semibold">Tâm lý học Ngôn ngữ</p>
+</div>
+<span class="material-symbols-outlined text-primary">play_circle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Meditation Music Section: Bento-ish Grid -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<h4 class="font-headline text-2xl font-bold text-on-surface">Nhạc thiền êm dịu</h4>
+<p class="text-on-surface-variant">Thư giãn tâm trí để tiếp thu kiến thức tốt hơn</p>
+</div>
+<a class="text-primary font-bold hover:underline flex items-center gap-1" href="#">
+                        Xem tất cả <span class="material-symbols-outlined text-lg">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+<!-- Item 1 -->
+<div class="group bg-surface-container-lowest p-5 rounded-[2rem] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="relative aspect-square rounded-2xl overflow-hidden mb-4">
+<img alt="Meditation item" class="w-full h-full object-cover" data-alt="Close up of a tranquil forest stream with sunlight filtering through emerald green leaves, peaceful nature scene" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4PQ6W1kJ1KmDwhcaUqCD6SZmOp0fC0iqm0g7cBx9PnNA9Og3RFxMijFQRoJVPixet-IER8_w38oSPLSQTpY4cSrosKIK7tO2S5F1wZSCIneidjlezyX-B7fkR5hupinvLuWDiLC3CDxm6uCUel3JpNANJDUJz3bjfrLfK-FAu1yweEr5eWwW36QQNHJwRlFlIC-Vh6Ae7-8-AMozZQOaK5Q7nZBzS_GMD__0AczIM8RqYlojiiQDcoXg7IXv9Cl-6Gm97wLkfkfI"/>
+<button class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
+<div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-primary shadow-2xl scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</button>
+</div>
+<h5 class="font-bold text-lg mb-1 truncate">Suối nguồn bình an</h5>
+<p class="text-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 15 phút • Âm thanh thiên nhiên
+                        </p>
+</div>
+<!-- Item 2 -->
+<div class="group bg-surface-container-lowest p-5 rounded-[2rem] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="relative aspect-square rounded-2xl overflow-hidden mb-4">
+<img alt="Meditation item" class="w-full h-full object-cover" data-alt="Soft morning mist over a calm lake with purple and pink horizon at dawn, ethereal and quiet atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADKKOnLZcydbPTd9ntgBX3pmHk_4Mx2BBttAzUuZFCtERUw0FZh_sj_YD1xI9MZv5WH9UNIF2szXT6n0U02lTnzoDGrA1Z4FvPUSuuKhyOA0Muys38eesjNOWrlCB8NBbWfO4J4yM1ttP6QrvAZ-QQCZjcZue8lOotzmJB3uLE7pcbB53VTT_iitlt3NDfecYhD_1gmuBU_Fli_ZjObpExVo8rIK0CLX9UNfHlhyqSrQ568GAnSe1udGhje9lalgvur7P3naITXQo"/>
+<button class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
+<div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-primary shadow-2xl scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</button>
+</div>
+<h5 class="font-bold text-lg mb-1 truncate">Sóng não Alpha</h5>
+<p class="text-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 30 phút • Binaural Beats
+                        </p>
+</div>
+<!-- Item 3 -->
+<div class="group bg-surface-container-lowest p-5 rounded-[2rem] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="relative aspect-square rounded-2xl overflow-hidden mb-4">
+<img alt="Meditation item" class="w-full h-full object-cover" data-alt="Zen rock garden with smooth grey stones and raked sand patterns, minimalist and structured calm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq_2zqz7-7OSr66otZxo8y6lmYfxXCGEsX7cLzCWxww_fnO97IwX_j6No_zUZdjw2enlq1c79c1KZDgnVdRuUncmu22Ll6Dx4ch3EMEFK3YWenmW3eNSU9NLEeWj60AUTzQObx5Edd0jElGfEU5diIpaTBQBOjXYAk1aeAh5UyjzjAeQdAXDE-XjqvzknfSax6ZbjqtbJfDkspx_bKdn8nSMaYLHVFQMx11pTTvagcKNARLqDmfslg4GAzpQA9iQUCPRwHTS2A_ew"/>
+<button class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
+<div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-primary shadow-2xl scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</button>
+</div>
+<h5 class="font-bold text-lg mb-1 truncate">Tĩnh lặng tuyệt đối</h5>
+<p class="text-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 10 phút • Không lời
+                        </p>
+</div>
+<!-- Item 4 -->
+<div class="group bg-surface-container-lowest p-5 rounded-[2rem] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="relative aspect-square rounded-2xl overflow-hidden mb-4">
+<img alt="Meditation item" class="w-full h-full object-cover" data-alt="Golden sunrise through tall pine trees with warm light rays and floating dust particles, inspiring morning mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkE7A93oFqTnWZ6yQuJRGmBb8RaM4M47cq6JjMtIAlsFiR4meQCSkwLftTdsWG8SHJwaX89KFStECv38e--K14v4p2Coqujp75rIz6zQJr4BAeX28P6VO8GAM1gfrpFr5BG46Hd8WiTLtGzFuvHOTHg2MIAukmoAcNhUQcMw0glUfb_XL6SivT6g6e4Fe2TMra54qTuH1gJgde95oMOuVg6lxMIjEA1KwVyDKm2lcG6PY8El9HQmQhpqMtUr-U2DXaYWd_pzcQyW0"/>
+<button class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
+<div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-primary shadow-2xl scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</button>
+</div>
+<h5 class="font-bold text-lg mb-1 truncate">Năng lượng bình minh</h5>
+<p class="text-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 20 phút • Piano &amp; Flute
+                        </p>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="space-y-6">
+<h4 class="font-headline text-2xl font-bold text-on-surface">Khám phá theo danh mục</h4>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low hover:bg-primary-container/10 border border-transparent hover:border-primary/20 rounded-3xl transition-all group">
+<div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-3 text-primary group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined">translate</span>
+</div>
+<span class="font-semibold text-sm">Ngữ pháp</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low hover:bg-primary-container/10 border border-transparent hover:border-primary/20 rounded-3xl transition-all group">
+<div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-3 text-secondary group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<span class="font-semibold text-sm">Giao tiếp</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low hover:bg-primary-container/10 border border-transparent hover:border-primary/20 rounded-3xl transition-all group">
+<div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-3 text-tertiary group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<span class="font-semibold text-sm">Viết lách</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low hover:bg-primary-container/10 border border-transparent hover:border-primary/20 rounded-3xl transition-all group">
+<div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-3 text-[#f74b6d] group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<span class="font-semibold text-sm">Từ vựng</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low hover:bg-primary-container/10 border border-transparent hover:border-primary/20 rounded-3xl transition-all group">
+<div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-3 text-primary group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined">auto_graph</span>
+</div>
+<span class="font-semibold text-sm">Phát âm</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-low hover:bg-primary-container/10 border border-transparent hover:border-primary/20 rounded-3xl transition-all group">
+<div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-3 text-on-surface-variant group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined">more_horiz</span>
+</div>
+<span class="font-semibold text-sm">Khác</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Footer Overlay: Editorial style -->
+<footer class="mt-12 bg-surface-container-low border-t border-outline-variant/10 py-12 px-8">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2 space-y-4">
+<h5 class="text-xl font-headline font-bold text-primary">Linguist Pro</h5>
+<p class="text-on-surface-variant max-w-md">
+                        Nền tảng học ngôn ngữ thế hệ mới, kết hợp giữa khoa học nhận thức và nghệ thuật thư giãn. Chúng tôi tin rằng việc học là một hành trình tận hưởng.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h6 class="font-bold mb-4">Liên kết</h6>
+<ul class="space-y-2 text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Về chúng tôi</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Đội ngũ giảng dạy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog chia sẻ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Chính sách bảo mật</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold mb-4">Tải ứng dụng</h6>
+<div class="space-y-3">
+<div class="bg-black text-white px-4 py-2 rounded-xl flex items-center gap-3 cursor-pointer hover:bg-neutral-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">ios</span>
+<div class="text-[10px] leading-tight">Download on the <br/><span class="text-sm font-bold">App Store</span></div>
+</div>
+<div class="bg-black text-white px-4 py-2 rounded-xl flex items-center gap-3 cursor-pointer hover:bg-neutral-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">play_store_installed</span>
+<div class="text-[10px] leading-tight">GET IT ON <br/><span class="text-sm font-bold">Google Play</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto mt-12 pt-8 border-t border-outline-variant/10 text-center text-xs text-on-surface-variant">
+                © 2024 Linguist Pro. All rights reserved. Designed for the Lucid Educator.
+            </div>
+</footer>
+</main>
+<!-- Contextual FAB (Only on relevant screens) -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-white rounded-2xl shadow-2xl shadow-primary/40 flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</body></html>

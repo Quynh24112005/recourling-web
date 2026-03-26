@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#f7f0ff",
+                        "primary-fixed-dim": "#ec50e6",
+                        "surface": "#f7f7f2",
+                        "surface-dim": "#d3d5cf",
+                        "surface-tint": "#a400a4",
+                        "surface-container-highest": "#dcddd7",
+                        "on-primary-fixed-variant": "#540054",
+                        "on-tertiary": "#d9ffaa",
+                        "on-secondary-container": "#5400ce",
+                        "surface-variant": "#dcddd7",
+                        "inverse-surface": "#0d0f0c",
+                        "on-surface": "#2d2f2c",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#3d6600",
+                        "primary-fixed": "#fc5ff5",
+                        "error": "#b41340",
+                        "error-dim": "#a70138",
+                        "outline": "#767773",
+                        "on-tertiary-fixed": "#2c4b00",
+                        "secondary-container": "#d9caff",
+                        "on-tertiary-container": "#395f00",
+                        "on-background": "#2d2f2c",
+                        "secondary-fixed": "#d9caff",
+                        "on-error": "#ffefef",
+                        "primary-container": "#fc5ff5",
+                        "on-surface-variant": "#5a5c58",
+                        "outline-variant": "#adada9",
+                        "on-primary-fixed": "#000000",
+                        "on-primary": "#ffeef8",
+                        "inverse-on-surface": "#9c9d99",
+                        "surface-bright": "#f7f7f2",
+                        "on-secondary-fixed-variant": "#5e00e6",
+                        "on-error-container": "#510017",
+                        "tertiary-fixed": "#b5fd5e",
+                        "secondary-dim": "#5d00e3",
+                        "inverse-primary": "#fc5ff5",
+                        "tertiary-fixed-dim": "#a7ee51",
+                        "background": "#f7f7f2",
+                        "on-secondary-fixed": "#3e009d",
+                        "on-primary-container": "#440044",
+                        "secondary": "#6a1cf6",
+                        "surface-container-low": "#f1f1ec",
+                        "error-container": "#f74b6d",
+                        "primary": "#a400a4",
+                        "on-tertiary-fixed-variant": "#406a00",
+                        "surface-container": "#e8e9e3",
+                        "tertiary-dim": "#355900",
+                        "surface-container-high": "#e2e3dd",
+                        "primary-dim": "#900090",
+                        "secondary-fixed-dim": "#ccb9ff",
+                        "tertiary-container": "#b5fd5e"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(247, 247, 242, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .tonal-layering {
+            background-color: #f1f1ec;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+<div class="flex justify-between items-center px-6 py-3 w-full max-w-full">
+<div class="flex items-center gap-6">
+<div class="text-2xl font-black text-primary tracking-tight font-headline">LucidEducator</div>
+<div class="h-6 w-[1px] bg-outline-variant/30 hidden md:block"></div>
+<div class="hidden md:flex gap-6 items-center">
+<span class="text-primary font-bold border-b-2 border-primary py-1 cursor-pointer">Kiểm tra đầu vào</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-highest/50 transition-colors rounded-full active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<button class="p-2 hover:bg-surface-container-highest/50 transition-colors rounded-full active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="User profile avatar" data-alt="Close-up portrait of a professional man with a friendly expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr2DhwudUK3YO5o_oeRPZ0cBJO_GZU7l8UIlR_qVM4efjCXSDMWkuOcAxI_tZPfaaVldGaCR8u5UkXVh5XKYxlJsVYNCYOMdSL-wMp83XTo3m2op5TYkB-up9Vf9MyFl9QvTojqFW1eaSUi6U20EczsrGeuM6NFhkm2a6Oca-8H7qELWHbJBHPd7sSvYiGvJmJ76wG6PwAkBD4x9YsiKidB-EzmK5uUacQU6rOffmaD1Su6Bae5QBymFXJzglo0n-0K7PdXK08daE"/>
+</div>
+</div>
+</div>
+<div class="bg-outline-variant/20 h-[1px] w-full"></div>
+</header>
+<main class="flex-1 mt-16 pb-32 flex flex-col items-center">
+<!-- Progress Bar Section -->
+<div class="w-full max-w-4xl px-6 pt-12 pb-8 flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-low rounded-xl text-on-surface-variant transition-all">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex-1 h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-1/3 transition-all duration-500"></div>
+</div>
+<div class="flex items-center gap-1 text-primary font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-sm">5</span>
+</div>
+</div>
+<!-- Question Prompt -->
+<div class="w-full max-w-2xl px-6 mb-12">
+<h2 class="font-headline text-3xl font-bold text-on-surface mb-2">Chọn ảnh phù hợp với từ:</h2>
+<div class="flex items-center gap-4 mt-8 p-6 bg-surface-container-lowest rounded-2xl shadow-sm border-2 border-primary/10">
+<div class="p-3 bg-primary/10 rounded-xl text-primary">
+<span class="material-symbols-outlined text-3xl">volume_up</span>
+</div>
+<div class="text-4xl font-headline font-extrabold text-on-surface tracking-tight">Con cá</div>
+</div>
+</div>
+<!-- Bento Grid for Options -->
+<div class="w-full max-w-4xl px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Option 1: Wrong (Cat) -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-3xl overflow-hidden bg-surface-container-lowest p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 border-transparent hover:border-outline-variant/30 flex flex-col items-center justify-between">
+<div class="w-full h-3/4 rounded-2xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="Close-up of a domestic short-hair cat with bright green eyes sitting in a sunlit room with soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1NSChPls8HaYax9lBAX4MJ6ENRkibqUY-Zsv7oqOyiuhTuGiYPQy1Jardm3dOceZadSBag4ecbcmEizfq2Ju4hZqzit8oG_V-NJ_JIx1TM6DSXJfeIE4ieYysCklpvzBDK30vM1Z4d3ktoQVXBta3KeBtDprYftRmjoZwtR63glnfYf4K8RTTJQInYTWUF6nhRO_5YH1i8BXKGE2o5iwFJTtZ9a2zyAzVbXGKF_C9O2WyGkDxQefhpCDVSqP2QtNtKt-OTUgBgxA"/>
+</div>
+<span class="font-headline font-bold text-lg text-on-surface-variant group-hover:text-primary transition-colors">1</span>
+</div>
+</div>
+<!-- Option 2: Correct (Fish) -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-3xl overflow-hidden bg-surface-container-lowest p-4 transition-all duration-300 shadow-sm border-4 border-primary ring-4 ring-primary/10 flex flex-col items-center justify-between">
+<div class="w-full h-3/4 rounded-2xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="Vibrant tropical clownfish swimming through soft pink sea anemone in clear blue water with natural light beams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy7cVgBqPrElZKfj2YZCYC4aV95j5930ap0gQcaUMvsJlC7qxvw3QO_0OUUEH7RSVRUIKX8RaPbzwQ-jQ5EdF5tm_vo5VWhZFtRnw2qSqDHAGag19sFkNgb_XbRO7FeIpXk5Ls7EUCZeuzxF4aQi3xjxeG4UJtafKWch-R0vfwXMSSrK-VqHSVR-Bv16dpedzwTnj1forvxzdRI4mJuUo5Cig8fVf9FFGwUprQK4AdShGCFC5_KdPDePO8m57sjseMkRF6A4XHNM8"/>
+</div>
+<span class="font-headline font-bold text-lg text-primary">2</span>
+<div class="absolute top-2 right-2 bg-primary text-on-primary p-1 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+</div>
+<!-- Option 3: Wrong (Bird) -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-3xl overflow-hidden bg-surface-container-lowest p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 border-transparent hover:border-outline-variant/30 flex flex-col items-center justify-between">
+<div class="w-full h-3/4 rounded-2xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="A small colorful songbird perched on a blossoming cherry tree branch with soft morning light and blurred garden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAoaSMOBhhC6dyNHqdXbfgO_MtblFyBXlrVSf1hcpE3gDO23Zk--lxqrf_GijzDTr7_0_oSaeDhhptqzRlGp1Ds2WB72_a7g9CQc9ZLTbxrsdDJgbWZtHDQLJGutruUcFkWGX5QxaEP6c4R4v4KK7JYK-NvrbffudN7ks2Xhfk4XOIv01Wm7tRswRIbcdPTP4xxcIfB-QNRIeMi5jxgtZNd6P1gP3tI0OFingmOtxtXK7sl_3zTx6MiXrUOUpTN3lUpwz3Xj5jkh0"/>
+</div>
+<span class="font-headline font-bold text-lg text-on-surface-variant group-hover:text-primary transition-colors">3</span>
+</div>
+</div>
+<!-- Option 4: Wrong (Dog) -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-3xl overflow-hidden bg-surface-container-lowest p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 border-transparent hover:border-outline-variant/30 flex flex-col items-center justify-between">
+<div class="w-full h-3/4 rounded-2xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="Golden retriever puppy sitting in a field of tall grass during golden hour with warm sunlight filtering through its fur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeo8qmVdfW4jxTTCJZ9g8NjUyA1nXt8qjjFBsgFaDJDuN_Gfm9vN8a986oVLLlB-4qeR4HZZhlFH2-vM1Gf0NkCPAaiQlA-DRFqMeFdd15H1mS9UyEomeF9-NT0Hig03BVipee7vxFKOn0Hvt-cEHQ5TTrMMP17UI9hmrfJJ_g1LyfPITonyD1wPhsvbZt95JfQ5hhCZJgI_svMPCQN6L6HAlJU8itjpYRZw6O5YyEsaPmkQOPhsfeLALMrXVmlc3MWdVAHx__UlQ"/>
+</div>
+<span class="font-headline font-bold text-lg text-on-surface-variant group-hover:text-primary transition-colors">4</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Action Anchor -->
+<footer class="fixed bottom-0 w-full bg-surface-container-low/95 backdrop-blur-md px-6 py-6 border-t border-outline-variant/10">
+<div class="max-w-4xl mx-auto flex justify-between items-center">
+<div class="hidden md:flex flex-col">
+<span class="text-tertiary font-bold text-lg flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    Làm tốt lắm!
+                </span>
+<span class="text-on-surface-variant text-sm">Bạn đã chọn đáp án chính xác.</span>
+</div>
+<div class="flex gap-4 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-8 py-4 rounded-xl font-bold bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95">
+                    Bỏ qua
+                </button>
+<button class="flex-[2] md:flex-none px-12 py-4 rounded-xl font-bold text-on-primary bg-gradient-to-br from-primary to-primary-dim shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95">
+                    Tiếp theo
+                </button>
+</div>
+</div>
+</footer>
+<!-- Side Navigation Blueprint (Hidden on Desktop Exercise Context as per suppression rules) -->
+<nav class="hidden lg:hidden flex-col h-screen w-64 fixed left-0 top-0 bg-surface p-4 gap-2 z-[60] border-r border-outline-variant/10">
+<div class="flex flex-col gap-1 mb-6 px-4">
+<span class="font-headline font-extrabold text-2xl text-primary tracking-tight">Lucid</span>
+<span class="font-body text-xs text-on-surface-variant/70 uppercase tracking-widest">Language Lab</span>
+</div>
+<a class="flex items-center gap-3 bg-primary/10 text-primary rounded-xl px-4 py-3" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-medium">Khám phá</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-highest px-4 py-3 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-medium">Khóa học</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-highest px-4 py-3 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">local_library</span>
+<span class="font-medium">Thư viện</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-highest px-4 py-3 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium">Cá nhân</span>
+</a>
+<div class="mt-auto p-4 bg-primary/5 rounded-2xl">
+<p class="text-sm font-bold text-primary mb-2">Tiến độ hôm nay</p>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden mb-3">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+<button class="w-full py-2 bg-primary text-on-primary rounded-lg text-xs font-bold">Bắt đầu học</button>
+</div>
+</nav>
+</body></html>

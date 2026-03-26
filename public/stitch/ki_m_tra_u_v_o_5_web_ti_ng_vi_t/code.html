@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ccb9ff",
+              "on-secondary": "#f7f0ff",
+              "error": "#b41340",
+              "on-tertiary": "#d9ffaa",
+              "primary": "#a400a4",
+              "background": "#f7f7f2",
+              "on-secondary-container": "#5400ce",
+              "secondary-container": "#d9caff",
+              "inverse-surface": "#0d0f0c",
+              "surface-container": "#e8e9e3",
+              "on-primary-fixed-variant": "#540054",
+              "error-container": "#f74b6d",
+              "tertiary-container": "#b5fd5e",
+              "on-surface": "#2d2f2c",
+              "tertiary-dim": "#355900",
+              "surface-bright": "#f7f7f2",
+              "secondary-dim": "#5d00e3",
+              "on-primary-container": "#440044",
+              "surface-tint": "#a400a4",
+              "on-primary": "#ffeef8",
+              "on-error-container": "#510017",
+              "on-secondary-fixed-variant": "#5e00e6",
+              "secondary": "#6a1cf6",
+              "primary-fixed": "#fc5ff5",
+              "on-tertiary-fixed-variant": "#406a00",
+              "outline": "#767773",
+              "on-tertiary-container": "#395f00",
+              "error-dim": "#a70138",
+              "primary-dim": "#900090",
+              "tertiary-fixed-dim": "#a7ee51",
+              "on-error": "#ffefef",
+              "surface-dim": "#d3d5cf",
+              "on-primary-fixed": "#000000",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#9c9d99",
+              "on-background": "#2d2f2c",
+              "tertiary": "#3d6600",
+              "secondary-fixed": "#d9caff",
+              "surface-container-highest": "#dcddd7",
+              "primary-container": "#fc5ff5",
+              "outline-variant": "#adada9",
+              "surface-container-high": "#e2e3dd",
+              "surface-variant": "#dcddd7",
+              "on-secondary-fixed": "#3e009d",
+              "on-surface-variant": "#5a5c58",
+              "inverse-primary": "#fc5ff5",
+              "surface-container-low": "#f1f1ec",
+              "primary-fixed-dim": "#ec50e6",
+              "surface": "#f7f7f2",
+              "on-tertiary-fixed": "#2c4b00",
+              "tertiary-fixed": "#b5fd5e"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .tonal-elevation {
+            box-shadow: 0 4px 16px rgba(45, 47, 44, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar Navigation Shell -->
+<header class="fixed top-0 w-full z-50 glass-nav shadow-sm shadow-black/5">
+<div class="flex justify-between items-center px-8 h-20 w-full">
+<div class="flex items-center gap-8">
+<span class="text-primary font-extrabold text-2xl tracking-tight font-headline">Linguist Pro</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary font-bold border-b-2 border-primary py-2 transition-colors duration-200" href="#">Kiểm tra năng lực</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Bảng điều khiển</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl text-primary font-bold hover:bg-surface-container-low transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="translate">translate</span>
+<span>Tiếng Việt</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/15">
+<img alt="Ảnh đại diện người dùng" data-alt="professional headshot of a smiling young man in a clean studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUBqdPaB326EGDlIpMhcLqOwyDtGmmE7v4YVIjVz35YhSqbzxUMKOghNm-D6Z6VsioGYqdv0JrsVF2mHcddIZB6yAAO2xe8h1bQVgTs1hYB8BuW9ZDSJ9bHDX_pVMQTOFtgttg4jUjTe4AcKsdl-Wzbk6Ngh58Ce71XFhRJY1_dezc7q7QwkgWeykyfEAtqmfSDmN9QQb_nsg3C1M0zO1iI7xxdvFuiHBL10lMjGx03vNsu2L_ZwKmQ8eZbaElkNwXFtpGcauVGvM"/>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low h-[1px] w-full"></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-24 px-6 md:px-12 max-w-6xl mx-auto w-full flex flex-col">
+<!-- Progress Indicator -->
+<div class="w-full mb-12 flex flex-col gap-3">
+<div class="flex justify-between items-end mb-1">
+<span class="text-on-surface-variant font-semibold uppercase tracking-wider text-xs">Tiến trình kiểm tra</span>
+<span class="text-primary font-bold font-headline">Bước 5 / 10</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2 rounded-full transition-all duration-500 ease-out"></div>
+</div>
+</div>
+<!-- Instructional Section -->
+<section class="text-center mb-10">
+<h1 class="font-headline font-bold text-3xl md:text-4xl text-on-surface mb-3">Kiểm tra năng lực</h1>
+<p class="text-on-surface-variant text-lg">Hãy chọn hình ảnh phù hợp với từ vựng bên dưới</p>
+</section>
+<!-- Question Focal Point -->
+<div class="flex justify-center mb-12">
+<div class="bg-surface-container-lowest tonal-elevation px-12 py-6 rounded-2xl border border-outline-variant/10 flex items-center gap-4 group">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="volume_up">volume_up</span>
+<span class="text-primary font-headline font-extrabold text-5xl tracking-tight">Con cá</span>
+</div>
+</div>
+<!-- Asymmetric Choice Grid (Bento Style) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+<!-- Choice 1: Gà -->
+<button class="group relative flex flex-col bg-surface-container-lowest rounded-3xl overflow-hidden tonal-elevation transition-all hover:translate-y-[-4px] hover:ring-2 hover:ring-primary/20 focus:ring-4 focus:ring-primary/40 outline-none active:scale-95 duration-200">
+<div class="aspect-square w-full bg-surface-container-low relative overflow-hidden">
+<img alt="Gà" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="vibrant colored rooster standing on green grass with soft natural sunlight and blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOXRUpUgQRA2A2kHt1KrKlzlS0dLxBfLIKmCePi5p_NDa5qydErHHK9nR6QSuD0i3wwzDDxNvt9bCd1qiM_GQYSbKeW7oFZ_5_yUmkz7p-SljQdHLf19JbjlO3OQ_qjY9HXcMV0Rj9jf3fZGrV3evZiokXtQzT1nmgDVDXePfPuBcVfKxAKuv-8sFUD_R0q98bFvJP0Ht2vOiV7lPuVyRl2dlkXI-FhBYcYeJ9CMtcnjnBEu3V7PTi8iT8L1eLBPvTyzq40m_EKng"/>
+</div>
+<div class="p-5 text-center">
+<span class="font-bold text-lg text-on-surface group-hover:text-primary transition-colors">Con gà</span>
+</div>
+<div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="check_circle">check_circle</span>
+</div>
+</div>
+</button>
+<!-- Choice 2: Cá (Correct) -->
+<button class="group relative flex flex-col bg-surface-container-lowest rounded-3xl overflow-hidden tonal-elevation transition-all hover:translate-y-[-4px] ring-2 ring-primary ring-offset-4 ring-offset-surface outline-none active:scale-95 duration-200">
+<div class="aspect-square w-full bg-surface-container-low relative overflow-hidden">
+<img alt="Cá" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="bright orange clownfish swimming among soft sea anemone in clear blue tropical water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp7VHH5YYh1Y04YMoBGEVUFKPHkwVUx9c3n1lxR33OCga9OpYO-wCXoiBGS6Qk2vQYDkbumq4sgKEIHZkOImO-mOPZGV_gs8aVyPjQuMIat8kkTCo5WTPvhlXXx91mj_6Vaj7o3y9nOfhpwcqLziico1WiBkofgQ-mhvgs1XeqEfvusY1CiDePoHu90TUot3AnhYTThL-P5N7CGxS9s8s0STjjNPduKi5j7C0hs4pPidlbCeDh129f88rIjMNM5NcZoh4KcAzBBNw"/>
+</div>
+<div class="p-5 text-center bg-primary">
+<span class="font-bold text-lg text-on-primary">Con cá</span>
+</div>
+<div class="absolute top-3 right-3">
+<div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-primary text-xl font-bold" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+</button>
+<!-- Choice 3: Bò -->
+<button class="group relative flex flex-col bg-surface-container-lowest rounded-3xl overflow-hidden tonal-elevation transition-all hover:translate-y-[-4px] hover:ring-2 hover:ring-primary/20 focus:ring-4 focus:ring-primary/40 outline-none active:scale-95 duration-200">
+<div class="aspect-square w-full bg-surface-container-low relative overflow-hidden">
+<img alt="Bò" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="close-up of a dairy cow with a gentle expression standing in a foggy green pasture at dawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9RwEJ8KhMgP4LsHn81PfYzmbHwh2NKi--GHVR8bi-eVjaVHMm9M-0kU6nD2Ze32-sRRu6YTXv11DXcVtw4LwP77SbX_2wF0G-dmXTweCEZan1DNB-K3Vvx-Wk3BXUALBCxHdt7IC185942zmKH9rBzbxSZLLUx7JICdOO2S7vsZJ7a74pGvlncjDzN_vJQFHqy004QO7modGjqESftdv5GTFvJuTzN8f817YN3jU3wAtXVlJz5zmyvEr-jl25iuGRXXd5x_i2gGA"/>
+</div>
+<div class="p-5 text-center">
+<span class="font-bold text-lg text-on-surface group-hover:text-primary transition-colors">Con bò</span>
+</div>
+</button>
+<!-- Choice 4: Chim -->
+<button class="group relative flex flex-col bg-surface-container-lowest rounded-3xl overflow-hidden tonal-elevation transition-all hover:translate-y-[-4px] hover:ring-2 hover:ring-primary/20 focus:ring-4 focus:ring-primary/40 outline-none active:scale-95 duration-200">
+<div class="aspect-square w-full bg-surface-container-low relative overflow-hidden">
+<img alt="Chim" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="small colorful kingfisher bird perched on a branch with smooth bokeh background and sharp detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0JucBvW4_DKvE9Jt_pAEX5XjuhyzDU5R8shuOkZwud4p21imieA5HDnxvlttn-eefP5gsGSUEbQaW-fkJVdspjy8dFDwAqxyN37xJFtSktYg5_D4TXhTF5IJpu6WAKdT3xR8sfwry-iJUrr8issIWYxaTAmFptLWgQ7wIqtOd_ck0Sma6-xhsFw11Av4vNB-5WoXOJg0aU07_XZs20jiTIdXFVT2cMr-koImr43Gpo0htAs1q4EJfFv1sXOnJwi0J9GCRfdRVX30"/>
+</div>
+<div class="p-5 text-center">
+<span class="font-bold text-lg text-on-surface group-hover:text-primary transition-colors">Con chim</span>
+</div>
+</button>
+</div>
+<!-- Footer Action Bar -->
+<div class="mt-auto flex flex-col md:flex-row items-center justify-between gap-6 pt-12 border-t border-outline-variant/10">
+<button class="flex items-center gap-2 px-8 py-4 rounded-xl text-on-surface-variant font-bold hover:bg-surface-container-high transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="skip_next">skip_next</span>
+<span>Bỏ qua</span>
+</button>
+<div class="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
+<p class="text-tertiary font-bold flex items-center gap-2 px-6 py-2 bg-tertiary-container/30 rounded-full">
+<span class="material-symbols-outlined text-xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Tuyệt vời! Bạn đã chọn đúng.
+                </p>
+<button class="w-full md:w-auto bg-primary text-on-primary px-12 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 flex items-center justify-center gap-3 transition-all hover:opacity-90 active:scale-95 bg-gradient-to-br from-primary to-primary-dim">
+<span>Tiếp theo</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- SideNavBar (Hidden on main exercise screens but kept for layout reference as per instructions) -->
+<aside class="hidden fixed left-0 top-0 h-full w-72 bg-surface-container-low border-r border-outline-variant/15 flex flex-col p-6 gap-2">
+<div class="mb-10 flex flex-col gap-1">
+<span class="text-primary font-black text-xl font-headline">Linguist Pro</span>
+<span class="text-on-surface-variant text-xs font-medium">Học tập không giới hạn</span>
+</div>
+<nav class="flex flex-col gap-2">
+<div class="bg-primary text-white rounded-xl shadow-lg shadow-primary/20 flex items-center gap-4 p-4">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-medium">Kiểm tra</span>
+</div>
+<div class="text-on-surface hover:bg-surface-container-highest rounded-xl flex items-center gap-4 p-4 transition-all hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-medium">Thống kê</span>
+</div>
+<div class="text-on-surface hover:bg-surface-container-highest rounded-xl flex items-center gap-4 p-4 transition-all hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-medium">Từ vựng</span>
+</div>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/15 flex flex-col gap-2">
+<div class="text-on-surface hover:bg-surface-container-highest rounded-xl flex items-center gap-4 p-4 transition-all hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium">Cài đặt</span>
+</div>
+<div class="text-on-surface hover:bg-surface-container-highest rounded-xl flex items-center gap-4 p-4 transition-all hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-medium">Trợ giúp</span>
+</div>
+</div>
+</aside>
+</body></html>

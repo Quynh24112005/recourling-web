@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6200EE",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#eaddff",
+                        "on-primary-container": "#21005d",
+                        "surface": "#f7f7f2",
+                        "on-surface": "#1c1b1f",
+                        "outline": "#79747e",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f7f2fa",
+                        "surface-container": "#f3edf7",
+                        "surface-container-high": "#ece6f0",
+                        "surface-container-highest": "#e6e1e5",
+                        "on-surface-variant": "#49454f",
+                        "outline-variant": "#cac4d0",
+                        "tertiary": "#3d6600",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#b5fd5e",
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f7f7f2;
+            color: #1c1b1f;
+        }
+        .headline-font { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-zinc-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-extrabold tracking-tight text-primary headline-font">Linguist Pro</span>
+<div class="hidden md:flex gap-6">
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-lg text-on-surface-variant hover:text-primary transition-colors px-3 py-2 rounded-lg" href="#">Dashboard</a>
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-lg text-primary border-b-2 border-primary pb-1 px-3 py-2" href="#">Courses</a>
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-lg text-on-surface-variant hover:text-primary transition-colors px-3 py-2 rounded-lg" href="#">Practice</a>
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-lg text-on-surface-variant hover:text-primary transition-colors px-3 py-2 rounded-lg" href="#">Community</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high p-2 rounded-full transition-all">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high p-2 rounded-full transition-all">settings</button>
+<img alt="User Profile" class="w-10 h-10 rounded-full border-2 border-primary-container object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_JZMJCEQaBEdCx38Itx5YTM49-peMIM3jTpnfQu9b-F2KAWA5vMbif9rXzXh5BsuwMAnDKOy8Y0eJOj5E_ykywtt9S2C5r0qPRMEWM9-5Qnlt65kidcOhMgiIVnV-7S48bpFvBEha3xoaYThhtb6kvqljuCG6BzydgSt0NF3gx5Pfa8syuV33lJkP9v07WI0awZB22eGstOwDVzCuWgMCB9076FoAgIgB6q32SNxQySM1i_CTcu0OWjinl6Yt2vkIi-jYCKRZ72Y"/>
+</div>
+</div>
+</nav>
+<div class="flex flex-1">
+<!-- SideNavBar -->
+<aside class="w-64 fixed left-0 top-16 bottom-0 bg-surface border-r border-outline-variant/30 z-40 hidden md:block">
+<div class="flex flex-col gap-2 p-4 h-full">
+<div class="mb-6 px-4 pt-4">
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold mb-1">Current Course</p>
+<p class="text-sm font-bold text-primary">Advanced Vietnamese</p>
+</div>
+<nav class="flex flex-col gap-1">
+<button class="flex items-center gap-3 bg-primary/10 text-primary font-bold rounded-xl px-4 py-3 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">style</span>
+<span class="text-sm">Flashcards</span>
+</button>
+<button class="flex items-center gap-3 text-on-surface-variant px-4 py-3 hover:bg-surface-container transition-all rounded-xl">
+<span class="material-symbols-outlined">linear_scale</span>
+<span class="text-sm">Pacing Boards</span>
+</button>
+<button class="flex items-center gap-3 text-on-surface-variant px-4 py-3 hover:bg-surface-container transition-all rounded-xl">
+<span class="material-symbols-outlined">mic</span>
+<span class="text-sm">Pronunciation</span>
+</button>
+<button class="flex items-center gap-3 text-on-surface-variant px-4 py-3 hover:bg-surface-container transition-all rounded-xl">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm">Progress</span>
+</button>
+<button class="flex items-center gap-3 text-on-surface-variant px-4 py-3 hover:bg-surface-container transition-all rounded-xl">
+<span class="material-symbols-outlined">local_library</span>
+<span class="text-sm">Library</span>
+</button>
+</nav>
+<div class="mt-auto pb-8 px-2">
+<button class="w-full bg-primary text-on-primary font-bold py-3 rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                        Start Daily Goal
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-64 p-8 flex flex-col items-center">
+<!-- Progress Header -->
+<div class="max-w-4xl w-full mb-12">
+<div class="flex items-center justify-between mb-4 px-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">school</span>
+<span class="text-sm font-bold text-on-surface-variant">Vocabulary Mastery</span>
+</div>
+<span class="text-sm font-bold text-primary">65% Complete</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000" style="width: 65%"></div>
+</div>
+</div>
+<!-- Central Flashcard Container -->
+<div class="flex-1 flex flex-col items-center justify-center w-full max-w-4xl gap-10">
+<!-- The Editorial Flashcard -->
+<div class="w-full bg-surface-container-lowest rounded-[2.5rem] overflow-hidden shadow-xl border border-outline-variant/20 flex flex-col lg:flex-row min-h-[500px]">
+<!-- Left: Visual Content -->
+<div class="w-full lg:w-1/2 relative bg-surface-container-low overflow-hidden">
+<img alt="People jogging" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujwgRSO46lQIG8DE-869erzrdcR_F2tXk5toCPOYYA1ELsLLLa5NH-kh8q_P2Fg5nbezsaaGeCWVsP8luN6I9tqdeOYj_oieslEdcfBQWK-u5DLFvU5YbdrfaQpldnu3iVXk7_bS9gaAexTas36mMSuZhwPwHDkQ_HpsmJyG4vW6TXOAeTD2_tWBGZUtOTOvdAZxSNaKHgc8iLn5Q-LyRxWmx2n1idVdUjKntNLxMLSsZALiw9Mm5ra-en22P6YTOn8nVDIm3Qp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 flex gap-2">
+<span class="px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-bold text-white uppercase tracking-widest border border-white/30">Vocabulary</span>
+<span class="px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-bold text-white uppercase tracking-widest border border-white/30">Verbs</span>
+</div>
+</div>
+<!-- Right: Learning Content -->
+<div class="w-full lg:w-1/2 p-10 lg:p-16 flex flex-col justify-center gap-8">
+<div>
+<p class="text-xs font-bold text-primary tracking-[0.2em] uppercase mb-4">Vietnamese Word</p>
+<div class="flex items-center gap-6">
+<h1 class="headline-font text-6xl font-extrabold text-on-surface tracking-tight">Đi bộ</h1>
+<button class="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-2xl">volume_up</span>
+</button>
+</div>
+</div>
+<div class="space-y-4">
+<p class="text-on-surface-variant font-bold uppercase tracking-widest text-[10px]">Example Context</p>
+<div class="p-8 bg-surface-container-low rounded-3xl border-l-8 border-primary/20">
+<p class="text-2xl leading-relaxed text-on-surface headline-font font-medium italic">
+                                    "Tôi <span class="text-primary font-bold not-italic">đi bộ</span> hằng ngày mỗi sáng. Đi bộ rất tốt cho sức khỏe."
+                                </p>
+</div>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant/70 font-medium">
+<span class="material-symbols-outlined text-primary">translate</span>
+<span class="text-sm">English: To walk / Jogging</span>
+</div>
+</div>
+</div>
+<!-- Interaction Controls -->
+<div class="flex flex-col items-center gap-8 w-full">
+<div class="flex flex-col items-center gap-4">
+<p class="text-on-surface-variant font-medium text-lg headline-font">Pronounce clearly to continue</p>
+<div class="relative group">
+<div class="absolute inset-0 bg-tertiary-container rounded-full blur-2xl opacity-30 animate-pulse"></div>
+<button class="relative w-20 h-20 bg-tertiary text-on-tertiary rounded-full flex items-center justify-center shadow-2xl hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+</div>
+<div class="w-full flex justify-center items-center gap-6">
+<button class="w-14 h-14 bg-surface-container-high text-on-surface-variant rounded-full flex items-center justify-center hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined">refresh</span>
+</button>
+<button class="flex items-center gap-4 bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl shadow-primary/30 hover:shadow-primary/40 hover:-translate-y-1 active:translate-y-0 transition-all headline-font">
+<span>Tiếp theo</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer Spacer -->
+<div class="h-12"></div>
+</main>
+</div>
+</body></html>
